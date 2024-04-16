@@ -1,0 +1,53 @@
+{
+  "name": "wordpress-starter",
+  "version": "1.0.0",
+  "description": "WordPress starter theme.",
+  "author": "Hipjea",
+  "license": "GPL-3.0",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Hipjea/wordpress-starter-theme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Hipjea/wordpress-starter-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hipjea/wordpress-starter-theme/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.2.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "dir-archiver": "^1.1.1",
+    "jquery": "^3.7.1",
+    "rtlcss": "^3.5.0",
+    "sass": "^1.71.0",
+    "swiper": "^11.1.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "watch": "sass assets/sass/:./dist/ --style=expanded --no-charset --load-path=node_modules --watch",
+    "compile:css": "sass assets/sass/:./dist/ --no-source-map --style=expanded --no-charset --load-path=node_modules && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss dist/main.css dist/style-rtl.css",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
+    "build": "webpack",
+    "build:dev": "webpack --watch"
+  }
+}

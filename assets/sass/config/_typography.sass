@@ -1,0 +1,19 @@
+@font-face
+	font-family: "texgyreheros-regular"
+	src: local("texgyreheros-regular"), url("#{$fonts_path}/texgyreheros-regular.otf") format("opentype")
+	font-weight: normal
+	font-style: normal
+	font-display: swap
+
+@font-face
+	font-family: "OpenDyslexic"
+	src: local("OpenDyslexic"), url("#{$fonts_path}/OpenDyslexic-Regular.otf") format("opentype")
+	font-weight: normal
+	font-style: normal
+	font-display: swap
+
+$font__base: texgyreheros-regular, Arial, sans-serif
+$font__line-height-body: 1.35em
+
+::selection
+	background: $color__highlight
