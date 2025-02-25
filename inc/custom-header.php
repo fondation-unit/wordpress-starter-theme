@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Sample implementation of the Custom Header feature
  *
@@ -76,3 +77,4 @@ if ( ! function_exists( 'wordpress_starter_header_style' ) ) :
 		<?php
 	}
 endif;
+
