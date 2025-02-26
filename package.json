@@ -25,6 +25,7 @@
     "prettier": "^3.5.2",
     "rtlcss": "^3.5.0",
     "sass": "^1.71.0",
+    "stylelint": "^16.14.1",
     "swiper": "^11.1.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
@@ -43,8 +44,8 @@
     "map": false
   },
   "scripts": {
-    "watch": "sass assets/sass/:./dist/ --style=expanded --no-charset --load-path=node_modules --watch",
-    "compile:css": "sass assets/sass/:./dist/ --no-source-map --style=expanded --no-charset --load-path=node_modules && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "watch": "sass assets/scss/:./dist/ --style=expanded --no-charset --load-path=node_modules --watch",
+    "compile:css": "sass assets/scss/:./dist/ --no-source-map --style=expanded --no-charset --load-path=node_modules && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss dist/main.css dist/style-rtl.css",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock",
