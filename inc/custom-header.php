@@ -48,7 +48,7 @@ if ( ! function_exists( 'wordpress_starter_header_style' ) ) :
 		 * If no custom options for text are set, let's bail.
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
 		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+		if (   get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color && get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color && get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color  ) {
 			return;
 		}
 

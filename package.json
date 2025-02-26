@@ -22,6 +22,7 @@
     "bootstrap-icons": "^1.11.3",
     "dir-archiver": "^1.1.1",
     "jquery": "^3.7.1",
+    "prettier": "^3.5.2",
     "rtlcss": "^3.5.0",
     "sass": "^1.71.0",
     "swiper": "^11.1.0",

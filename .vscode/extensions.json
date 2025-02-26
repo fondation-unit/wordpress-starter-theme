@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "bmewburn.vscode-intelephense-client",
-    "esbenp.prettier-vscode",
-    "syler.sass-indented"
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
   ]
 }
