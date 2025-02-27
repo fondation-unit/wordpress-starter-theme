@@ -55,6 +55,8 @@
                     array(
                         'theme_location' => 'menu-1',
                         'menu_id'        => 'primary-menu',
+                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
                     )
                 );
                 ?>

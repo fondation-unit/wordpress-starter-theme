@@ -8,7 +8,7 @@
  * @package wordpress-starter-theme
  */
 
-function wordpress_starter_widgets_init() {
+function wordpress_starter_footer_widgets_init() {
     register_sidebar(
         array(
             'name' => 'Footer widgets',
@@ -20,4 +20,4 @@ function wordpress_starter_widgets_init() {
         )
     );
 }
-add_action('widgets_init', 'wordpress_starter_widgets_init');
+add_action('widgets_init', 'wordpress_starter_footer_widgets_init');
