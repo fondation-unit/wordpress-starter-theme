@@ -55,10 +55,13 @@
                     array(
                         'theme_location' => 'menu-1',
                         'menu_id'        => 'primary-menu',
-                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-						'walker'          => new WP_Bootstrap_Navwalker(),
+						'walker'          => new bootstrap_5_wp_nav_menu_walker(),
                     )
                 );
                 ?>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
+
+        <div class="bg-white--50">
+            testjkgfldsjg fdlksjg fdklsgj fdlgjdklsgjldfsgjklfgjdlsg j
+        </div>
