@@ -61,7 +61,3 @@
                 ?>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
-
-        <div class="bg-white--50">
-            testjkgfldsjg fdlksjg fdklsgj fdlgjdklsgjldfsgjklfgjdlsg j
-        </div>

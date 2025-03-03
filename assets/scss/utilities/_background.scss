@@ -1,6 +1,7 @@
 @import "../mixins/background-variant";
 @import "../mixins/hover";
 @import "bootstrap/scss/mixins/transition";
+@import "../config/colors";
 
 
 @each $color, $value in $theme-colors {
