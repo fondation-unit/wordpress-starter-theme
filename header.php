@@ -55,6 +55,7 @@
                     array(
                         'theme_location' => 'menu-1',
                         'menu_id'        => 'primary-menu',
+						'walker'          => new bootstrap_5_wp_nav_menu_walker(),
                     )
                 );
                 ?>

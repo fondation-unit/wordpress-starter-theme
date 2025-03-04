@@ -1,0 +1,37 @@
+@import 'hover';
+
+@mixin bg-variant($parent, $color) {
+
+    #{$parent} {
+        background-color: $color !important;
+
+        &--hover {
+            @include transition;
+        }
+
+        @each $size, $level in $transparencies {
+
+            &--#{$size} {
+                background-color: rgba($color, $level) !important;
+            }
+        }
+    }
+    a#{$parent},
+    button#{$parent} {
+
+        @include hover-focus {
+
+            background-color: darken($color, 10%) !important;
+        }
+    }
+    a,
+    button {
+
+        @include hover-focus {
+
+            #{$parent}--hover {
+                background-color: darken($color, 10%) !important;
+            }
+        }
+    }
+}

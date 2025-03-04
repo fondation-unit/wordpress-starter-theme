@@ -4,6 +4,10 @@
 @import 'bootstrap/scss/functions';
 
 // 2. Include any default variable overrides here
+// Variables de couleurs à mettre dans ce fichier
+// @import 'config/colors';
+// @import 'config/arrays';
+
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import 'bootstrap/scss/variables';
@@ -51,6 +55,13 @@
 @import 'bootstrap/scss/tooltip';
 @import 'bootstrap/scss/transitions';
 
+@import 'basic/common/menu';
+@import 'mixins/background-variant';
+@import 'utilities/background';
+@import 'utilities/position';
+@import 'utilities/sizing';
+
+
 // Customs
 $custom-colors: (
   'custom-color': #900
@@ -58,7 +69,8 @@ $custom-colors: (
 $theme-colors: (
   'primary': $primary,
   'danger': $danger,
-  'success': $success
+  'success': $success,
+  'blue': $blue
 );
 $modal-show-transform: none;
 $modal-transition: transform 0.3s ease-out;

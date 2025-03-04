@@ -1,0 +1,119 @@
+@import "../mixins/background-variant";
+@import "../mixins/hover";
+@import "bootstrap/scss/mixins/transition";
+@import "../config/colors";
+
+
+@each $color, $value in $theme-colors {
+    @include bg-variant(".bg-#{$color}", $value);
+}
+
+.bg {
+    &-white {
+        background-color: white !important;
+
+        @each $size, $level in $transparencies {
+
+            &--#{$size} {
+                background-color: rgba(white, $level) !important;
+            }
+        }
+    }
+
+    &-transparent {
+        background-color: transparent !important;
+    }
+
+    &-size {
+
+        &--cover {
+            background-size: cover;
+        }
+
+        &--contain {
+            background-size: contain;
+        }
+    }
+
+
+    &-position {
+
+        &--m {
+            background-position: center;
+        }
+
+        &--tm {
+            background-position: top center;
+        }
+    }
+
+    &--no-repeat {
+        background-repeat: no-repeat;
+    }
+
+    &-shadow {
+        position: relative;
+
+        &:after {
+            content: ' ';
+            z-index: 0;
+            display: block;
+            position: absolute;
+            //@extend .a-0;
+            @include transition();
+        }
+
+        &--50 {
+
+            &:after {
+                background-color: rgba($black, 50%);
+            }
+
+
+            &:hover {
+
+                &:after {
+                    background-color: rgba($black, 60%);
+                }
+            }
+        }
+
+        &--40 {
+
+            &:after {
+                background-color: rgba($black, 40%);
+            }
+
+
+            &:hover {
+
+                &:after {
+                    background-color: rgba($black, 50%);
+                }
+            }
+        }
+    }
+
+    &-bubbles {
+        background-position: top right;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(lg) {
+            background-image: none;
+        }
+    }
+
+    &-station-carebox{
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+}
+
+.backg {
+    background-repeat: no-repeat;
+    background-position: calc(100% + 200px) bottom;
+
+    @include media-breakpoint-down(xl) {
+        background-position: calc(100% + 300px) bottom;;
+    }
+}

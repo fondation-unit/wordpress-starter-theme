@@ -150,6 +150,8 @@ function wordpress_starter_scripts() {
 }
 add_action('wp_enqueue_scripts', 'wordpress_starter_scripts');
 
+wp_enqueue_style('wordpress-strater', get_template_directory_uri() . '/dist/main.css', array(), _S_VERSION);
+
 /**
  * Implement the Custom Header feature.
  */
@@ -168,7 +170,7 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Menus functions.
  */
-require get_template_directory() . '/inc/menus.php';
+// require get_template_directory() . '/inc/menus.php';
 
 /**
  * H5P functions.
