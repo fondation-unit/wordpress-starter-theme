@@ -153,6 +153,21 @@ add_action('wp_enqueue_scripts', 'wordpress_starter_scripts');
 wp_enqueue_style('wordpress-strater', get_template_directory_uri() . '/dist/main.css', array(), _S_VERSION);
 
 /**
+ * Disable /users rest routes.
+ * Security measures to prevent user logins from being exposed publicly.
+ */
+add_filter('rest_endpoints', function ($endpoints) {
+    if (isset($endpoints['/wp/v2/users'])) {
+        unset($endpoints['/wp/v2/users']);
+    }
+    if (isset($endpoints['/wp/v2/users/(?P<id>[\d]+)'])) {
+        unset($endpoints['/wp/v2/users/(?P<id>[\d]+)']);
+    }
+
+    return $endpoints;
+});
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
