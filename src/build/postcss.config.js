@@ -3,19 +3,9 @@
 const process = require( 'process' );
 
 const colors = [
-	'blue',
-	'indigo',
-	'purple',
-	'pink',
-	'red',
-	'orange',
-	'yellow',
-	'green',
-	'teal',
-	'cyan',
-	'white',
-	'gray',
-	'gray-dark',
+	'primary',
+	'secondary',
+	'blue'
 ];
 
 module.exports = ( ctx ) => {
