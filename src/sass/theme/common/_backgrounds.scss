@@ -1,0 +1,43 @@
+.bg {
+    &-white {
+        background-color: white !important;
+
+        @each $size, $level in $transparencies {
+
+            &--#{$size} {
+                background-color: rgba(white, $level) !important;
+            }
+        }
+    }
+
+    &-transparent {
+        background-color: transparent !important;
+    }
+
+    &-size {
+
+        &--cover {
+            background-size: cover;
+        }
+
+        &--contain {
+            background-size: contain;
+        }
+    }
+
+
+    &-position {
+
+        &--m {
+            background-position: center;
+        }
+
+        &--tm {
+            background-position: top center;
+        }
+    }
+
+    &--no-repeat {
+        background-repeat: no-repeat;
+    }
+}

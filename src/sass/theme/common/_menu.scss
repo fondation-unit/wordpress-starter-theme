@@ -1,0 +1,38 @@
+.navbar-nav .nav-link {
+  color: $dark;
+}
+
+.navbar-toggler{
+  i{
+    color: $black;
+    font-size: 1.8rem;
+  }
+}
+
+.dropend .dropdown-toggle {
+  color: $secondary;
+  margin-left: 1em;
+}
+.dropdown-item:hover {
+  background-color: transparent;
+  color: $primary;
+}
+.dropdown .dropdown-menu {
+  display: none;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+@media screen and (min-width: 769px) {
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin bg-variant($parent, $color) {
+
+    #{$parent} {
+        background-color: $color !important;
+        @each $size, $level in $transparencies {
+
+            &--#{$size} {
+                background-color: rgba($color, $level) !important;
+            }
+        }
+    }
+}

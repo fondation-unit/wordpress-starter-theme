@@ -1,0 +1,13 @@
+#wrapper-navbar {
+    .custom-logo-link {
+        width: 250px;
+
+        @include media-breakpoint-down(md){
+            width: 150px;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
