@@ -8,13 +8,13 @@
         color: $primary;
     }
 
-    @each $color, $value in $theme-colors {
-        &.#{$color} {
-            &:after {
-                color: $value;
-            }
-        }
-    }
+    //@each $color, $value in $theme-colors {
+    //    &.#{$color} {
+    //        &:after {
+    //            color: $value;
+    //        }
+    //    }
+    //}
 
     &.no-point{
         &:after{

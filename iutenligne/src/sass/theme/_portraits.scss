@@ -1,7 +1,7 @@
 .home {
 
     .bg-uness-40 {
-
+        @extend .bg-footer-40;
         .portraits {
             position: relative;
             @each $step, $content-width in $container-max-widths {
@@ -41,7 +41,7 @@
                 width: 310px !important;
                 text-decoration: none !important;
 
-                @include loop-card($aunege);
+                @include loop-card($primary);
                 height: 370px;
                 border-bottom-left-radius: 20px;
 
@@ -97,5 +97,5 @@ swiper-container::part(bullet) {
 }
 
 swiper-container::part(bullet-active) {
-    background-color: $blue;
+    background-color: $primary;
 }

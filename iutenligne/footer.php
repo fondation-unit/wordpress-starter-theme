@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="bg-dark-blue">
+		<div class="bg-footer">
             <div class="container pt-md-6 py-4">
                 <div class="d-flex flex-md-row flex-column">
                     <div class="col-md-3 d-flex flex-column left-footer mb-md-0 mb-4">
@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                 </div>
 
-                <div class="footer-last d-flex border-top py-2">&copy; 2025 L'Université Numérique
+                <div class="footer-last d-flex border-top py-2">&copy; 2025 <?php echo get_bloginfo('name'); ?>
                 </div>
             </div>
 		</div><!-- .row -->

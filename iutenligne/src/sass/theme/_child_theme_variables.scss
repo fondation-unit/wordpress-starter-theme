@@ -4,7 +4,8 @@
 @import "mixins/bg-variant";
 
 $dark-blue: #101f6b;
-$primary: #101f6b;
+$footer: #012D5C;
+$primary: #e7408f;
 $uoh: #bf1d2e;
 $iut: #e7408f;
 $unit: #25aae1;
@@ -16,9 +17,10 @@ $violet: #7E3F98;
 $blue: #0D75BB;
 
 $theme-colors: (
-    "primary": $dark-blue,
     "uoh": $uoh,
     "iut": $iut,
+    "primary": $iut,
+    "footer": $footer,
     "unit": $unit,
     "uness": $uness,
     "aunege": $aunege,

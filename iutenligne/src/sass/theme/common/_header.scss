@@ -55,11 +55,11 @@
 
                 input[type="search"] {
                     &:focus-visible, &:focus, &:active {
-                        border: 1px solid #efebe4;
+                        border: 1px solid $primary;
                         box-shadow: none;
                     }
 
-                    border: 1px solid #efebe4;
+                    border: 1px solid $primary;
                     padding: 5px 10px;
                     height: 45px;
                 }
