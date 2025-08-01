@@ -1,0 +1,56 @@
+.home {
+    #index-wrapper {
+        padding-top: 0;
+        position: relative;
+        background: url('../img/pattern-gauche.png') left 35% no-repeat, url('../img/pattern-droite.png') right 115% no-repeat;
+        margin-top: 82px;
+
+        .top-banner {
+            padding: 0;
+            background-color: $dark-blue;
+            background-image: url('../img/sphere2.jpg');
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            min-height: calc(100vh - 115px);
+            background-repeat: no-repeat;
+            background-position: 0% 100%;
+
+            @include media-breakpoint-down(lg) {
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: center center;
+            }
+            @include media-breakpoint-down(md) {
+                min-height: 0;
+                height: 300px;
+            }
+
+            .container {
+                height: 100%;
+
+                h1 {
+                    text-transform: uppercase;
+                    color: $white;
+                }
+
+                .wp-block-columns {
+                    &:not(.is-not-stacked-on-mobile) {
+                        & > .wp-block-column {
+                            @include media-breakpoint-down(xl) {
+                                flex-basis: auto;
+                            }
+                        }
+                    }
+                }
+
+                .btn-uved {
+                    padding: 16px 24px;
+                }
+            }
+        }
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+    }
+}

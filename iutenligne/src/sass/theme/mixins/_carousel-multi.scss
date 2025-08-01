@@ -1,0 +1,145 @@
+@mixin carousel-multi() {
+
+	/*********************************************************************/
+
+	/* Bootstrap 4 Multiple Item Carousel */
+
+	/*********************************************************************/
+
+	.carousel-control-prev,
+	.carousel-control-next {
+		font-size: 3rem;
+	}
+
+	#carouselportraits {
+		margin-left: 50px;
+		margin-right: 50px;
+
+		@include media-breakpoint-down(md) {
+			margin: 2rem 1rem 4rem;
+		}
+
+		.carousel-control-prev {
+			margin-left: -120px;
+			width: 3%;
+
+			@include media-breakpoint-down(md) {
+				display: none !important;
+			}
+		}
+
+		.carousel-control-next {
+			margin-right: -120px;
+			width: 3%;
+
+			@include media-breakpoint-down(md) {
+				display: none !important;
+			}
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			align-items: center;
+			background-image: none;
+			display: flex;
+			height: 3rem;
+			justify-content: center;
+			text-align: center;
+			width: 3rem;
+			color: $dark;
+		}
+
+		.carousel-control-next-icon::after {
+			color: $dark;
+			content: "\6e";
+			font-family: "bienchezsoi";
+			font-weight: 600;
+		}
+
+		.carousel-control-prev-icon::after {
+			color: $dark;
+			content: "\70";
+			font-family: "bienchezsoi";
+			font-weight: 600;
+		}
+	}
+
+	.carousel-inner > .item {
+		background-color: $white;
+		-webkit-transition: -webkit-transform 2s ease-in-out !important;
+		-o-transition: -o-transform 2s ease-in-out !important;
+		transition: transform 2s ease-in-out !important;
+	}
+
+	.carousel-indicators{
+		@include media-breakpoint-down(md){
+			display: flex;
+		}
+		bottom: -40px;
+		li{
+			border-radius: 50%;
+			height: 10px;
+			width: 10px;
+			background: transparent;
+			margin-right: 10px;
+			border:1px solid $gray-900;
+
+			&.active{
+				background-color: $gray-900;
+			}
+		}
+	}
+
+	/* medium - display 2  */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-right.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(50%);
+		}
+
+		.carousel-inner .carousel-item-left.active,
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-50%);
+		}
+	}
+
+	/* large - display 3 */
+	@media (min-width: 992px) {
+
+		.carousel-inner .carousel-item-right.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(100%);
+		}
+
+		.carousel-inner .carousel-item-left.active,
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-100%);
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		.carousel-inner .carousel-item-right.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(100%);
+		}
+
+		.carousel-inner .carousel-item-left.active,
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-100%);
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	.carousel-inner .carousel-item-right,
+	.carousel-inner .carousel-item-left {
+		transform: translateX(0);
+	}
+
+}

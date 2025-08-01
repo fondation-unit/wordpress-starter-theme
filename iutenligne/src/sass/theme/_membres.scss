@@ -1,0 +1,13 @@
+.home {
+    .membres{
+        h2{
+            font-size: 1.375rem;
+            border-bottom: 1px solid #EFEBE4;
+
+            &:after{
+                font-size: .3rem;
+                margin-left: 5px;
+            }
+        }
+    }
+}

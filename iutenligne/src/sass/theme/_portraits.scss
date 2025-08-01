@@ -1,0 +1,101 @@
+.home {
+
+    .bg-uness-40 {
+
+        .portraits {
+            position: relative;
+            @each $step, $content-width in $container-max-widths {
+                @include media-breakpoint-up($step) {
+                    margin-left: calc((100vw - $content-width) * 1.6 * -1);
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 350px;
+                width: 250px;
+                z-index: 15;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .8) 100%);
+
+                @include media-breakpoint-down(md) {
+                    width: 100px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+
+            &.swiper {
+                width: 100%;
+                height: 100%;
+                padding: 20px 0 !important;
+                bottom: 30px !important;
+
+            }
+
+            swiper-slide {
+                width: 310px !important;
+                text-decoration: none !important;
+
+                @include loop-card($aunege);
+                height: 370px;
+                border-bottom-left-radius: 20px;
+
+                .image {
+                    height: 255px;
+                }
+
+                h3 {
+                    font-size: 1.125rem;
+                    margin-bottom: 0.75rem;
+                }
+
+                a {
+                    text-decoration: none !important;
+                }
+
+                p {
+                    line-height: 1.25rem;
+                }
+            }
+
+        }
+    }
+}
+
+swiper-container::part(container) {
+    padding-bottom: 50px;
+}
+
+swiper-container::part(wrapper) {
+    position: relative;
+    padding-bottom: 50px;
+
+}
+
+swiper-container::part(pagination) {
+    @each $step, $content-width in $container-max-widths {
+        @include media-breakpoint-up($step) {
+            padding-left: calc((100vw - $content-width) / 1.3);
+        }
+    }
+}
+
+swiper-container::part(bullet),
+swiper-container::part(bullet-active) {
+    height: 12px !important;
+    width: 12px !important;
+    opacity: 1 !important;
+}
+
+swiper-container::part(bullet) {
+    background-color: $white;
+}
+
+swiper-container::part(bullet-active) {
+    background-color: $blue;
+}

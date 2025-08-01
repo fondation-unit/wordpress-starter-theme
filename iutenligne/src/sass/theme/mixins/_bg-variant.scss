@@ -1,0 +1,24 @@
+@mixin bg-variant($parent, $color) {
+
+    #{$parent} {
+        background-color: $color !important;
+
+        @each $size, $level in $transparencies {
+            $my_color: rgba($color, $level);
+            &-#{$size} {
+                position: relative !important;
+                z-index: 5 !important;
+                //background-color: rgba($color, $level) !important;
+
+                background-color: rgba_blend($my_color, white);
+            }
+        }
+    }
+}
+
+@function rgba_blend($fore, $back) {
+    $ored: ((1 - alpha($fore)) * red($back) ) + (alpha($fore) * red($fore));
+    $ogreen: ((1 - alpha($fore)) * green($back) ) + (alpha($fore) * green($fore));
+    $oblue: ((1 - alpha($fore)) * blue($back) ) + (alpha($fore) * blue($fore));
+    @return rgb($ored, $ogreen, $oblue);
+}

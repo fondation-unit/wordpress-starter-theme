@@ -1,0 +1,78 @@
+.bg {
+    &-white {
+        background-color: white !important;
+
+        @each $size, $level in $transparencies {
+
+            &--#{$size} {
+                background-color: rgba(white, $level) !important;
+            }
+        }
+    }
+
+    &-transparent {
+        background-color: transparent !important;
+    }
+
+    &-size {
+
+        &--cover {
+            background-size: cover;
+        }
+
+        &--contain {
+            background-size: contain;
+        }
+    }
+
+
+    &-position {
+
+        &--m {
+            background-position: center;
+        }
+
+        &--tm {
+            background-position: top center;
+        }
+    }
+
+    &--no-repeat {
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+//.pattern-gauche, .pattern-droite{
+//    padding: 2rem -0px;
+//    position: relative;
+//
+//    &:after{
+//        content:'';
+//        -webkit-background-size: contain;
+//        background-size: contain;
+//        position: absolute;
+//        z-index: -1;
+//        bottom: 0;
+//        height: 100%;
+//        width: 100%;
+//    }
+//}
+//
+//
+//.pattern-gauche{
+//    &:after{
+//        content:'';
+//        background: url('../img/pattern-gauche.png') center left no-repeat;
+//        left: 0;
+//    }
+//}
+//
+//.pattern-droite{
+//    &:after{
+//        content:'';
+//        background: url('../img/pattern-droite.png') center right no-repeat;
+//        right: 0;
+//    }
+//}

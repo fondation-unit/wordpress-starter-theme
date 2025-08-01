@@ -1,0 +1,94 @@
+footer {
+    p, h2, h3, li {
+        color: $white;
+    }
+
+    h3 {
+        margin: 1rem 0 1.5rem !important;
+    }
+
+    a{
+        color: $white;
+        text-decoration: none;
+        font-size: 0.875rem;
+
+        &:hover{
+            color: $white;
+            opacity: .6;
+        }
+    }
+
+    .center-footer {
+        h3 {
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    .rs-footer {
+        a {
+
+            i {
+                color: $white;
+                padding: 14px;
+                background-color: rgba(255, 255, 255, .2);
+                border-radius: 8px;
+                transition: all .5s;
+                font-size: 1.5rem;
+            }
+
+            &:hover {
+                i {
+                    background-color: rgba(255, 255, 255, .4);
+                }
+            }
+        }
+    }
+
+    .right-footer{
+        .sib-email-area{
+            width: 100%;
+            background-color: rgba(255, 255, 255, .4);
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            color: $white;
+            font-size: .75rem;
+
+            &::placeholder {
+                color: $white;
+                opacity: 1;
+            }
+        }
+
+        input[type="submit"]{
+            @extend .btn;
+            @extend .btn-uved;
+            margin: 10px 0;
+            padding: 12px 24px;
+        }
+    }
+
+    .footer-last{
+        font-size: .75rem;
+        margin-top: 1.5rem;
+        color: rgba(255, 255, 255, .4);
+    }
+}
+
+#back_top {
+    border-radius: 50%;
+    bottom: 30px;
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    padding-top: 8px;
+    position: fixed;
+    right: 30px;
+    text-align: center;
+    width: 40px;
+    z-index: 9998;
+
+    &:hover {
+        background-color: $secondary !important;
+    }
+}

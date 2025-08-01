@@ -1,0 +1,89 @@
+.home {
+
+    .actus-home {
+        .news {
+            @include loop-card($aunege);
+
+            @include media-breakpoint-down(md) {
+                height: auto !important;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                text-decoration: none;
+            }
+
+            .image {
+                height: 145px;
+                display: inline-flex;
+                width: 100%;
+
+                @include media-breakpoint-down(md) {
+                    height: auto !important;
+                }
+            }
+
+            &.first-news {
+                height: 495px;
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(md) {
+                    height: auto !important;
+                    margin-bottom: 30px;
+                }
+
+                .image {
+                    height: 330px;
+                    @include media-breakpoint-down(md) {
+                        height: auto !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+#actualites {
+    .actualites {
+        .actualite {
+            @include loop-card();
+            height: 200px;
+            width: 100%;
+
+            @include media-breakpoint-down(md){
+                height: auto;
+            }
+
+            .image {
+                height: 200px;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+                margin: 0 0 1.5rem !important;
+            }
+
+            p {
+                font-size: .875rem;
+            }
+        }
+
+        @include loop-card-color();
+    }
+}
+
+.post-navigation {
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .nav-previous, .nav-next {
+        width: 50%;
+    }
+
+    .nav-next {
+        justify-content: end;
+        display: flex;
+    }
+}

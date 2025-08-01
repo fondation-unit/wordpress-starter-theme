@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: Rubik, sans-serif;
+    color: $dark;
+    font-weight: 400;
+
+    & > * {
+        box-sizing: border-box;
+    }
+
+    img {
+        @include media-breakpoint-down(md) {
+            max-width: 100% !important;
+        }
+    }
+
+    p, li {
+        line-height: 1.75rem;
+        font-weight: 300;
+    }
+
+    .row, .container-fluid {
+        --bs-gutter-x: 0 !important;
+    }
+
+    a {
+        color: $dark;
+
+        &:hover {
+            color: $dark;
+        }
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+
+    @include point-title(0.5rem, 10px);
+
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+h3 {
+    font-size: 1.375rem;
+    line-height: 100%;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.7rem;
+        line-height: 1.5rem;
+    }
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}
+
+p {
+    color: $dark;
+    line-height: 1.4rem;
+
+    .medium {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .small {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+
+    .xs {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+}
+
+.color-primary {
+    color: $primary;
+}
+

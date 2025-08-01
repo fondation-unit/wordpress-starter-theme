@@ -1,0 +1,138 @@
+.navbar-nav {
+
+    .menu-item {
+        margin-right: 15px;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 10px;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            color: $dark;
+            font-size: 1.125rem;
+
+            @include media-breakpoint-down(xl) {
+                font-size: 1rem;
+                color: $white;
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    i {
+        color: $black;
+        font-size: 1.8rem;
+    }
+}
+
+.dropend .dropdown-toggle {
+    color: $secondary;
+    margin-left: 1em;
+}
+
+.dropdown-toggle {
+    &:after {
+        border: none;
+        //content: "\f107";
+        content: "\056";
+        font-family: "FontAwesome";
+        vertical-align: 0;
+        font-size: 0.8rem;
+        margin-left: 5px;
+        color: #b8cac8;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        &:after {
+            transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg);
+            transform-style: preserve-3d;
+        }
+    }
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: $primary;
+}
+
+.dropdown {
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        margin-top: 10px;
+        margin-left: -42px;
+        border: none;
+        width: 250%;
+        padding: 30px 0 25px 35px;
+        top: 0;
+        visibility: hidden;
+        transform: translateY(0);
+        transition: all .3s ease-out;
+        box-shadow: 0 25px 25px 0 rgba(206, 198, 192, 0.5);
+    }
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+    opacity: 1;
+    top: -267px;
+    visibility: visible;
+    transform: translateY(100%);
+}
+
+.offcanvas {
+    width: 100% !important;
+
+
+    .menu-logo {
+        display: none;
+        @include media-breakpoint-down(md) {
+            display: block;
+            width: 50%;
+        }
+    }
+
+    .offlogo {
+        @include media-breakpoint-down(md) {
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    .offcanvas-header {
+        width: 50%;
+
+        @include media-breakpoint-down(xl){
+            width: 100%;
+        }
+    }
+
+    .offcanvas-body {
+        .nav-link {
+
+            @include media-breakpoint-down(md) {
+                text-transform: uppercase;
+                font-family: Dosis, sans-serif;
+                font-weight: 600;
+                font-size: 1.7rem;
+                line-height: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .dropend:hover > .dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+    .dropend .dropdown-toggle {
+        margin-left: 0.5em;
+    }
+}

@@ -1,0 +1,107 @@
+#wrapper-navbar {
+
+    #main-nav {
+        box-shadow: 0 0 15px 0 rgba(39, 56, 145, 0.4);
+
+        .custom-logo-link {
+            width: 200px;
+
+            @include media-breakpoint-down(md) {
+                width: 150px;
+            }
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        .container {
+            position: relative;
+
+            .search-form-div {
+                position: absolute;
+                top: 0;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(0);
+                transition: all .3s ease-out;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                display: flex;
+                background-color: $white;
+                box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+                border-radius: 25px 0;
+                z-index: -1;
+                padding: 10px 20px;
+
+                .search-form {
+                    width: 100%;
+                }
+
+                &.show {
+                    top: 43px;
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(100%);
+                }
+
+                .input-group {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    display: flex;
+                }
+
+                input[type="search"] {
+                    &:focus-visible, &:focus, &:active {
+                        border: 1px solid #efebe4;
+                        box-shadow: none;
+                    }
+
+                    border: 1px solid #efebe4;
+                    padding: 5px 10px;
+                    height: 45px;
+                }
+
+                button {
+                    width: 3%;
+
+                    i {
+                        color: $primary;
+                    }
+
+                    &:hover, &:active {
+                        background: none;
+                        box-shadow: none;
+                        border: none;
+
+                        i {
+
+                            color: rgba($primary, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .left {
+        @include media-breakpoint-down(xl) {
+            width: 100%;
+        }
+    }
+
+    .right {
+        i {
+            font-size: 2rem;
+            color: $primary;
+
+            @include media-breakpoint-down(xl) {
+                color: $white;
+            }
+        }
+    }
+}
+

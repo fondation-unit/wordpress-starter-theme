@@ -1,0 +1,24 @@
+@mixin point-title($font-point-size, $ml){
+
+    &:after {
+        content: "\f111";
+        font-family: "FontAwesome";
+        font-size: $font-point-size;
+        margin-left: $ml;
+        color: $primary;
+    }
+
+    @each $color, $value in $theme-colors {
+        &.#{$color} {
+            &:after {
+                color: $value;
+            }
+        }
+    }
+
+    &.no-point{
+        &:after{
+            content:"";
+        }
+    }
+}
