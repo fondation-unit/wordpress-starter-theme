@@ -6,17 +6,11 @@
  */
 get_header();
 
-$title = get_the_title();
-$class = getClassFromTitle($title);
 $container = get_theme_mod('understrap_container_type');
 
-$logo = get_field('logo');
-$illustration = get_field('illustration');
-
-$size = wp_is_mobile() ? 'medium' : 'medium_large';
 ?>
 
-    <div id="single-project">
+    <div id="single-project" class="mb-4">
         <div class="wrapper" id="page-wrapper">
 
             <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
