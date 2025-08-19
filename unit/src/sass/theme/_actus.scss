@@ -1,8 +1,9 @@
+@use "sass:map";
 .home {
 
     .actus-home {
         .news {
-            @include loop-card($primary);
+            @include loop-card($aunege);
 
             @include media-breakpoint-down(md) {
                 height: auto !important;
@@ -71,6 +72,34 @@
         }
 
         @include loop-card-color();
+    }
+}
+
+.single-post{
+    h1{
+        line-height: 3.5rem;
+    }
+
+    .entry-content{
+        h2, .wp-element-button{
+            margin: 40px 0;
+        }
+
+        h2{
+            &:after{
+                color: $primary;
+            }
+        }
+
+        .wp-element-button{
+            @extend .btn;
+            @extend .btn-primary;
+        }
+    }
+
+    .alignwide{
+        max-width: 100% !important;
+        margin: 0 auto !important;
     }
 }
 

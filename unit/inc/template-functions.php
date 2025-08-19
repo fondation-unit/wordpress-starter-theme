@@ -89,13 +89,16 @@ add_filter('the_content', 'baseplate_lazyload_content_images');
 add_filter('acf_the_content', 'baseplate_lazyload_content_images');
 function baseplate_lazyload_content_images($content)
 {
+    if(mb_strpos($content, '.svg') === 0){
+
+        $content = preg_replace("/<img(.*?)(src=|srcset=)(.*?)>/i", '<img$1data-$2$3>', $content);
+        //-- Add .lozad class to each image that already has a class.
+        $content = preg_replace('/<img(.*?)class=\"(.*?)\"(.*?)>/i', '<img$1class="$2 lozad"$3>', $content);
+        //-- Add .lozad class to each image that doesn't have a class.
+        $content = preg_replace('/<img(.*?)(?!\bclass\b)(.*?)/i', '<img$1 class="lozad"$2', $content);
+        $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '$1$2$3', $content);
+    }
     //-- Change src/srcset to data attributes.
-    $content = preg_replace("/<img(.*?)(src=|srcset=)(.*?)>/i", '<img$1data-$2$3>', $content);
-    //-- Add .lozad class to each image that already has a class.
-    $content = preg_replace('/<img(.*?)class=\"(.*?)\"(.*?)>/i', '<img$1class="$2 lozad"$3>', $content);
-    //-- Add .lozad class to each image that doesn't have a class.
-    $content = preg_replace('/<img(.*?)(?!\bclass\b)(.*?)/i', '<img$1 class="lozad"$2', $content);
-    $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '$1$2$3', $content);
 
     return $content;
 }
@@ -173,15 +176,62 @@ function cleanUrl($url)
     return preg_replace('/https?:\/\/|www.|\/$/', '', $url);
 }
 
-function getClassFromTitle($title){
+function getClassFromTitle($title)
+{
     return $title == 'IUTenligne' ? 'iut' : strtolower($title);
 }
 
-function createRSIcon($type){
+function createRSIcon($type)
+{
     $typeIcon = [
         'Facebook' => 'facebook-f',
         'Linkedin' => 'linkedin-in',
         'Twitter (X)' => 'x-twitter',
     ];
-    return '<i class="fa-brands fa-'.$typeIcon[$type].'"></i>';
+
+    return '<i class="fa-brands fa-' . $typeIcon[$type] . '"></i>';
 }
+
+add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+    global $wp_version;
+    if ($wp_version !== '4.7.1') {
+        return $data;
+    }
+
+    $filetype = wp_check_filetype($filename, $mimes);
+
+    return [
+        'ext' => $filetype['ext'],
+        'type' => $filetype['type'],
+        'proper_filename' => $data['proper_filename'],
+    ];
+}, 10, 4);
+
+function cc_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+
+    return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');
+
+function wpdocs_add_svg( $wp_get_mime_types ) {
+    if ( ! array_key_exists('svg', $wp_get_mime_types )) {
+        $wp_get_mime_types['svg'] = 'image/svg+xml';
+    }
+    return $wp_get_mime_types;
+}
+add_filter( 'mime_types', 'wpdocs_add_svg', 99 );
+
+function fix_svg()
+{
+    echo '<style type="text/css">
+        .attachment-266x266, .thumbnail img {
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+}
+
+add_action('admin_head', 'fix_svg');

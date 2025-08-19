@@ -78,42 +78,42 @@
 }
 
 .bg-primary {
-  background-color: #e7408f !important;
+  background-color: #25aae1 !important;
 }
 .bg-primary-30 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(247.8, 197.7, 221.4);
+  background-color: rgb(189.6, 229.5, 246);
 }
 .bg-primary-40 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(245.4, 178.6, 210.2);
+  background-color: rgb(167.8, 221, 243);
 }
 .bg-primary-50 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(243, 159.5, 199);
+  background-color: rgb(146, 212.5, 240);
 }
 .bg-primary-60 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(240.6, 140.4, 187.8);
+  background-color: rgb(124.2, 204, 237);
 }
 .bg-primary-70 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(238.2, 121.3, 176.6);
+  background-color: rgb(102.4, 195.5, 234);
 }
 .bg-primary-80 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(235.8, 102.2, 165.4);
+  background-color: rgb(80.6, 187, 231);
 }
 .bg-primary-90 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(233.4, 83.1, 154.2);
+  background-color: rgb(58.8, 178.5, 228);
 }
 
 .bg-footer {
@@ -861,7 +861,7 @@ progress {
   --bs-gray-900: #212529;
   --bs-uoh: #bf1d2e;
   --bs-iut: #e7408f;
-  --bs-primary: #e7408f;
+  --bs-primary: #25aae1;
   --bs-footer: #012D5C;
   --bs-unit: #25aae1;
   --bs-uness: #5ba0a5;
@@ -872,7 +872,7 @@ progress {
   --bs-dark-blue: #101f6b;
   --bs-uoh-rgb: 191, 29, 46;
   --bs-iut-rgb: 231, 64, 143;
-  --bs-primary-rgb: 231, 64, 143;
+  --bs-primary-rgb: 37, 170, 225;
   --bs-footer-rgb: 1, 45, 92;
   --bs-unit-rgb: 37, 170, 225;
   --bs-uness-rgb: 91, 160, 165;
@@ -904,8 +904,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #e7408f;
-  --bs-link-hover-color: rgb(184.8, 51.2, 114.4);
+  --bs-link-color: #25aae1;
+  --bs-link-hover-color: rgb(29.6, 136, 180);
   --bs-code-color: #d63384;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
 }
@@ -988,13 +988,13 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: rgb(250.2, 216.8, 232.6);
-  --bs-table-border-color: rgb(225.18, 195.12, 209.34);
-  --bs-table-striped-bg: rgb(237.69, 205.96, 220.97);
+  --bs-table-bg: rgb(211.4, 238, 249);
+  --bs-table-border-color: rgb(190.26, 214.2, 224.1);
+  --bs-table-striped-bg: rgb(200.83, 226.1, 236.55);
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: rgb(225.18, 195.12, 209.34);
+  --bs-table-active-bg: rgb(190.26, 214.2, 224.1);
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: rgb(231.435, 200.54, 215.155);
+  --bs-table-hover-bg: rgb(195.545, 220.15, 230.325);
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -1307,7 +1307,7 @@ progress {
   --bs-gray-900: #212529;
   --bs-uoh: #bf1d2e;
   --bs-iut: #e7408f;
-  --bs-primary: #e7408f;
+  --bs-primary: #25aae1;
   --bs-footer: #012D5C;
   --bs-unit: #25aae1;
   --bs-uness: #5ba0a5;
@@ -1318,7 +1318,7 @@ progress {
   --bs-dark-blue: #101f6b;
   --bs-uoh-rgb: 191, 29, 46;
   --bs-iut-rgb: 231, 64, 143;
-  --bs-primary-rgb: 231, 64, 143;
+  --bs-primary-rgb: 37, 170, 225;
   --bs-footer-rgb: 1, 45, 92;
   --bs-unit-rgb: 37, 170, 225;
   --bs-uness-rgb: 91, 160, 165;
@@ -1350,8 +1350,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #e7408f;
-  --bs-link-hover-color: rgb(184.8, 51.2, 114.4);
+  --bs-link-color: #25aae1;
+  --bs-link-hover-color: rgb(29.6, 136, 180);
   --bs-code-color: #d63384;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
 }
@@ -1374,7 +1374,7 @@ progress {
 
 .text-bg-primary {
   color: #000 !important;
-  background-color: RGBA(231, 64, 143, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(37, 170, 225, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-footer {
@@ -1432,10 +1432,10 @@ progress {
 }
 
 .link-primary {
-  color: #e7408f !important;
+  color: #25aae1 !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: rgb(235.8, 102.2, 165.4) !important;
+  color: rgb(80.6, 187, 231) !important;
 }
 
 .link-footer {
@@ -11092,16 +11092,16 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #e7408f;
+  color: #25aae1;
 }
 
 .has-primary-background-color {
-  background-color: #e7408f;
-  border-color: #e7408f;
+  background-color: #25aae1;
+  border-color: #25aae1;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-primary-color {
-  color: #e7408f;
+  color: #25aae1;
 }
 
 .has-footer-color,
