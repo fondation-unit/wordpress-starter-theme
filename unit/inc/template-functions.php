@@ -12,6 +12,8 @@ if (site_url() === 'http://un.test') {
     define('UNT_UN', 226);
 }
 
+define('PRIMARY', 'unit');
+
 function dd($data, $die = false)
 {
     echo '<pre>';

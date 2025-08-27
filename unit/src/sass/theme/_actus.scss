@@ -3,7 +3,7 @@
 
     .actus-home {
         .news {
-            @include loop-card($aunege);
+            @include loop-card($primary);
 
             @include media-breakpoint-down(md) {
                 height: auto !important;

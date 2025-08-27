@@ -21,9 +21,6 @@ $args = [
 ];
 $argsActus = new WP_Query($args);
 
-if ($paged == 1) {
-    $_SESSION['random_color'] = randomTitleClass();
-}
 
 ?>
 
@@ -38,7 +35,7 @@ if ($paged == 1) {
                         <div class="container">
                             <?php
                             the_title(
-                                '<header class="entry-header"><h1 class="entry-title ' . $_SESSION['random_color']
+                                '<header class="entry-header"><h1 class="entry-title ' . PRIMARY
                                 . '">',
                                 '</h1></header><!-- .entry-header -->'
                             );
@@ -54,7 +51,7 @@ if ($paged == 1) {
                                                     $argsActus->the_post();
                                                     ?>
                                                     <a href="<?php echo get_permalink(); ?>"
-                                                       class="actualite d-flex flex-md-row flex-column loop-card-<?php echo $_SESSION['random_color']; ?>">
+                                                       class="actualite d-flex flex-md-row flex-column loop-card-<?php echo PRIMARY; ?>">
                                                         <div class="image col-md-4">
 
                                                             <?php
@@ -98,7 +95,7 @@ if ($paged == 1) {
                                             ?>
                                         </div>
                                     </div>
-                                    <div class="Ligne nav-actus pb-md-6 py-4 <?php echo $_SESSION['random_color']; ?>">
+                                    <div class="Ligne nav-actus pb-md-6 py-4 <?php echo PRIMARY; ?>">
                                         <div id="navPages" class="w-100 mt-4">
                                             <?php
                                             $pagination = new Pagination();
