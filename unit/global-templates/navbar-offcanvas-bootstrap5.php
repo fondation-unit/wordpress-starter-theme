@@ -62,10 +62,10 @@ $container = get_theme_mod('understrap_container_type');
                     ?>
                     <div class="d-xl-none right d-flex justify-content-end align-items-end pb-3">
                         <div>
-                            <a href="#" class="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#" class="search-toggle" title="Accéder au formulaire de recherche"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-primary ms-3">
+                            <a href="https://moodle.luniversitenumerique.fr/" class="btn btn-primary ms-3">
                                 Accès Moodle
                             </a>
                         </div>
@@ -74,19 +74,15 @@ $container = get_theme_mod('understrap_container_type');
             </div>
             <div class="d-xl-flex d-none right justify-content-end align-items-end pb-3">
                 <div>
-                    <a href="#" class="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" class="search-toggle" title="Accéder au formulaire de recherche"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
                 <div>
-                    <a href="#" class="btn btn-primary ms-3">
+                    <a href="https://moodle.luniversitenumerique.fr/" class="btn btn-primary ms-3">
                         Accès Moodle
                     </a>
                 </div>
             </div>
             <div class="search-form-div">
-<!--                    <input type="text" name="s" id="search" placeholder="--><?php //echo __('Search &hellip;', 'understrap-child'); ?><!--">-->
-<!--                    <button type="submit" class="btn btn-success">-->
-<!--                        <i class="fa-solid fa-magnifying-glass"></i>-->
-<!--                    </button>-->
                 <?php get_search_form(); ?>
             </div>
         </div>

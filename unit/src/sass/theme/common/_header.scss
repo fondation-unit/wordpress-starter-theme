@@ -4,6 +4,10 @@
         box-shadow: 0 0 15px 0 rgba(39, 56, 145, 0.4);
         min-height: 115px;
 
+        @include media-breakpoint-down(md){
+            min-height: 0;
+        }
+
         .custom-logo-link {
             width: 200px;
 

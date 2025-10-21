@@ -5,6 +5,50 @@
         background: url('../img/pattern-gauche.png') left 35% no-repeat, url('../img/pattern-droite.png') right 115% no-repeat;
         margin-top: 115px;
 
+        .bg-primary{
+            min-height: calc(100vh - 115px);
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-down(md) {
+                min-height: 0;
+                height: 300px;
+            }
+
+            .container {
+                height: 100%;
+
+                h1 {
+                    text-transform: uppercase;
+                    color: $white;
+                }
+
+                p{
+                    color: $white;
+                }
+
+                .wp-block-columns {
+                    &:not(.is-not-stacked-on-mobile) {
+                        & > .wp-block-column {
+                            @include media-breakpoint-down(xl) {
+                                flex-basis: auto;
+                            }
+                        }
+                    }
+                }
+
+                img{
+                    width: auto !important;
+                }
+
+                .wp-element-button{
+                    @extend .btn;
+                    background-color: #007DB1;
+                    padding: 16px 24px;
+                }
+            }
+        }
+
         .top-banner {
             padding: 0;
             background-color: $dark-blue;

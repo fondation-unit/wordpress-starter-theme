@@ -1,73 +1,82 @@
-@mixin loop-card($color: 'primary'){
+@mixin loop-card($color: $primary) {
 
-        box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+    box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+    border-radius: 25px 0;
+    height: 145px;
+    margin-bottom: 30px;
+    position: relative;
+    text-decoration: none !important;
+    background: $white;
+
+    .image {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .image {
         border-radius: 25px 0;
-        height: 145px;
-        margin-bottom: 30px;
-        position: relative;
-        text-decoration: none !important;
-        background: $white;
 
-        .image {
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .image {
+        img {
             border-radius: 25px 0;
+        }
+    }
 
-            img {
-                border-radius: 25px 0;
+    .link {
+        margin-top: -55px;
+        display: flex;
+        justify-content: flex-end;
+        width: calc(100% - 20px);
+
+        .link-content {
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+            }
+
+            display: flex;
+            align-items: center;
+            color: $color;
+
+            .hidden {
+                opacity: 0;
+                transform: translateX(-100px);
+                transition: all .5s;
+                font-size: .8rem;
+                text-transform: uppercase;
+            }
+
+            i {
+                margin-left: 20px;
+                font-size: 1.5rem;
             }
         }
+    }
 
+    &:hover {
         .link {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-
             .link-content {
-                display: flex;
-                align-items: center;
-                color: $color;
-
                 .hidden {
-                    opacity: 0;
-                    transform: translateX(-100px);
-                    transition: all .5s;
-                    font-size: .8rem;
-                    text-transform: uppercase;
-                }
-
-                i {
-                    margin-left: 20px;
-                    font-size: 1.5rem;
-                }
-
-            }
-
-        }
-
-        &:hover {
-            .link {
-                .link-content {
-                    .hidden {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
+                    opacity: 1;
+                    transform: translateX(0);
                 }
             }
         }
+    }
 }
 
-@mixin loop-card-color(){
+@mixin loop-card-color() {
     @each $color, $value in $theme-colors {
-        .loop-card-#{$color}{
-            .link{
-                .link-content{
+        .loop-card-#{$color} {
+            .link {
+                .link-content {
                     color: $value !important;
                 }
             }

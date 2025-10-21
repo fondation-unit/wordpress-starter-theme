@@ -29,10 +29,7 @@ $upload_dir = wp_upload_dir();
             <main class="site-main" id="main">
                 <?php
                 the_content();
-//                set_query_var('postId', get_the_ID());
-                get_template_part('template-parts/home-unts');
                 ?>
-
             </main>
         </div><!-- #content -->
     </div><!-- #index-wrapper -->

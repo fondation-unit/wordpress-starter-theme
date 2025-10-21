@@ -7026,16 +7026,22 @@
 	  $('.search-toggle').on('click', () => {
 	    $('.search-form-div').toggleClass('show');
 	  });
+	  let height = $('body').height();
+	  $(document).ready(() => {
+	    reAdaptBg(height);
+	    let dataSrc = $('.custom-logo-link img').attr('data-src');
+	    $('.custom-logo-link img').attr('src', dataSrc);
+	  });
 	})(jQuery);
-	//const swiper = new Swiper('.mySwiper', {
-	//    spaceBetween: 30,
-	//    centeredSlides: true,
-	//    pagination: {
-	//        el: '.swiper-pagination',
-	//        clickable: true,
-	//        type: 'bullets'
-	//    }
-	//});
+	function reAdaptBg(height) {
+	  if (height < 3000) {
+	    jQuery('.both-bgs').css('background-position', "left 120%, right 300%");
+	    jQuery('.one-bg').css('background-position', "left 120%");
+	  } else {
+	    jQuery('.both-bgs').css('background-position', "left 35%, right 115%");
+	    jQuery('.one-bg').css('background-position', "left 35%");
+	  }
+	}
 
 	exports.Alert = alert;
 	exports.Button = button;

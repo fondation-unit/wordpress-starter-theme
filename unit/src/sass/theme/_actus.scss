@@ -1,47 +1,8 @@
 @use "sass:map";
 .home {
-
     .actus-home {
         .news {
             @include loop-card($primary);
-
-            @include media-breakpoint-down(md) {
-                height: auto !important;
-            }
-
-            h3 {
-                font-size: 1.125rem;
-                line-height: 1.5rem;
-                text-decoration: none;
-            }
-
-            .image {
-                height: 145px;
-                display: inline-flex;
-                width: 100%;
-
-                @include media-breakpoint-down(md) {
-                    height: auto !important;
-                }
-            }
-
-            &.first-news {
-                height: 495px;
-                margin-bottom: 0;
-
-                @include media-breakpoint-down(md) {
-                    height: auto !important;
-                    margin-bottom: 30px;
-                }
-
-                .image {
-                    height: 330px;
-                    @include media-breakpoint-down(md) {
-                        height: auto !important;
-                    }
-                }
-            }
-
         }
     }
 }
@@ -53,17 +14,32 @@
             height: 200px;
             width: 100%;
 
-            @include media-breakpoint-down(md){
+            @include media-breakpoint-down(md) {
                 height: auto;
+                min-height: 430px;
+            }
+
+            a {
+                text-decoration: none;
             }
 
             .image {
                 height: 200px;
+                @include media-breakpoint-down(md) {
+                    height: 150px !important;
+                }
             }
 
-            h3 {
+            .content {
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 40px;
+                }
+            }
+
+            h2 {
                 font-size: 1.125rem;
                 margin: 0 0 1.5rem !important;
+                line-height: 1.5rem;
             }
 
             p {

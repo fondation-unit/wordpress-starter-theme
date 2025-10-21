@@ -50,8 +50,8 @@ $argsActus = new WP_Query($args);
                                                 while ($argsActus->have_posts()) :
                                                     $argsActus->the_post();
                                                     ?>
-                                                    <a href="<?php echo get_permalink(); ?>"
-                                                       class="actualite d-flex flex-md-row flex-column loop-card-<?php echo PRIMARY; ?>">
+                                                    <div
+                                                       class="actualite d-flex flex-md-row flex-column flex-wrap loop-card-<?php echo PRIMARY; ?>">
                                                         <div class="image col-md-4">
 
                                                             <?php
@@ -64,11 +64,11 @@ $argsActus = new WP_Query($args);
 
                                                         </div>
                                                         <div class="content p-md-4 p-3 col-md-8">
-                                                            <h3 class="no-point">
+                                                            <h2 class="no-point">
                                                                 <?php
                                                                 echo get_the_title();
                                                                 ?>
-                                                            </h3>
+                                                            </h2>
                                                             <?php
                                                             $excerpt = get_the_excerpt();
                                                             echo '<p>' . ((mb_strlen($excerpt) > 200)
@@ -78,15 +78,15 @@ $argsActus = new WP_Query($args);
                                                             ?>
                                                         </div>
                                                         <div class="link">
-                                                            <div class="link-content">
+                                                            <a href="<?php echo get_permalink(); ?>" class="link-content">
                                                                 <span class="sr-only">Voir les détails du
                                                                                       projet</span>
                                                                 <span class="hidden">En savoir plus</span>
                                                                 <i class="icon-fleche-actu-projet"></i>
-                                                            </div>
+                                                            </a>
                                                         </div>
 
-                                                    </a>
+                                                    </div>
 
                                                 <?php
                                                 endwhile;

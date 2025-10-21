@@ -1,33 +1,23 @@
 .home {
-    .projet {
-        @include loop-card($primary);
-        height: 425px;
-        width: 32%;
-        margin-right: 2%;
-
-        &:nth-of-type(3n+3) {
-            margin-right: 0;
-        }
-
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            margin-right: 0;
-        }
-
-        .image {
-            height: 200px;
-        }
-
-        h3 {
-            font-size: 1.125rem;
-        }
-
-        p {
-            font-size: .875rem;
+    .projets {
+        h2 {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 1.5rem !important;
+                margin-top: 1rem;
+            }
         }
     }
 }
 
+.projets-home {
+    .projet {
+        @include loop-card($primary);
+
+        .content{
+            max-height: 160px;
+        }
+    }
+}
 #projets {
     background: url('../img/pattern-gauche.png') left top no-repeat;
 
@@ -59,6 +49,14 @@
 
             p {
                 font-size: .875rem;
+            }
+
+            .content{
+                max-height: 160px;
+            }
+
+            .link {
+                margin-top: 25px;
             }
         }
 

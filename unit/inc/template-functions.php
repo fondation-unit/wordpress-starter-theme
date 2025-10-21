@@ -4,7 +4,7 @@
 //    DEBUG
 //
 //====================================================================
-if (site_url() === 'http://un.test') {
+if (site_url() === 'http://unit.test') {
     define('ACTUALITES', 41);
     define('UNT_UN', 14230);
 } else {
@@ -43,8 +43,8 @@ function my_custom_login_logo()
     $upload_dir = wp_upload_dir();
     echo '<style type="text/css">
 h1 a {background-image:url(' . get_stylesheet_directory_uri() . '/img/logo.png)!important;
--webkit-background-size:inherit!important;
-background-size:inherit!important;
+-webkit-background-size:contain!important;
+background-size:contain!important;
 height: 170px !important;
 width:inherit!important;}
 </style>';
@@ -91,8 +91,7 @@ add_filter('the_content', 'baseplate_lazyload_content_images');
 add_filter('acf_the_content', 'baseplate_lazyload_content_images');
 function baseplate_lazyload_content_images($content)
 {
-    if(mb_strpos($content, '.svg') === 0){
-
+    if (mb_strpos($content, '.svg') === 0) {
         $content = preg_replace("/<img(.*?)(src=|srcset=)(.*?)>/i", '<img$1data-$2$3>', $content);
         //-- Add .lozad class to each image that already has a class.
         $content = preg_replace('/<img(.*?)class=\"(.*?)\"(.*?)>/i', '<img$1class="$2 lozad"$3>', $content);
@@ -100,6 +99,7 @@ function baseplate_lazyload_content_images($content)
         $content = preg_replace('/<img(.*?)(?!\bclass\b)(.*?)/i', '<img$1 class="lozad"$2', $content);
         $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '$1$2$3', $content);
     }
+
     //-- Change src/srcset to data attributes.
 
     return $content;
@@ -218,13 +218,16 @@ function cc_mime_types($mimes)
 
 add_filter('upload_mimes', 'cc_mime_types');
 
-function wpdocs_add_svg( $wp_get_mime_types ) {
-    if ( ! array_key_exists('svg', $wp_get_mime_types )) {
+function wpdocs_add_svg($wp_get_mime_types)
+{
+    if (! array_key_exists('svg', $wp_get_mime_types)) {
         $wp_get_mime_types['svg'] = 'image/svg+xml';
     }
+
     return $wp_get_mime_types;
 }
-add_filter( 'mime_types', 'wpdocs_add_svg', 99 );
+
+add_filter('mime_types', 'wpdocs_add_svg', 99);
 
 function fix_svg()
 {
@@ -237,3 +240,25 @@ function fix_svg()
 }
 
 add_action('admin_head', 'fix_svg');
+
+function getPhotoSize()
+{
+    return wp_is_mobile() ? 'medium' : 'medium_large';
+}
+
+function max_posts_search()
+{
+    global $wp_query;
+
+    return $wp_query->max_num_pages;
+}
+
+function alter_att_attributes_wpse_102079($attr)
+{
+    $attr['data-src'] = $attr['src'];
+    unset($attr['src']);
+
+    return $attr;
+}
+
+add_filter('wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');

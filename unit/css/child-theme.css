@@ -3364,7 +3364,6 @@ progress {
   background-color: #fff;
   border-color: rgb(146, 212.5, 240);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(37, 170, 225, 0.25);
 }
 .form-control::-webkit-date-and-time-value, .wpcf7 .wpcf7-validation-errors::-webkit-date-and-time-value, .wpcf7 input[type=text]::-webkit-date-and-time-value,
 .wpcf7 input[type=search]::-webkit-date-and-time-value,
@@ -3760,7 +3759,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .wpcf7 .btn-check[disabled] + input[type=submit], footer .right-footer .btn-check[disabled] + input[type=submit], .btn-check:disabled + .btn, .wpcf7 .btn-check:disabled + input[type=submit], footer .right-footer .btn-check:disabled + input[type=submit] {
+.btn-check[disabled] + .btn, .wpcf7 .btn-check[disabled] + input[type=submit], .single-post .entry-content .btn-check[disabled] + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-check[disabled] + .wp-element-button, footer .right-footer .btn-check[disabled] + input[type=submit], .btn-check:disabled + .btn, .wpcf7 .btn-check:disabled + input[type=submit], .single-post .entry-content .btn-check:disabled + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-check:disabled + .wp-element-button, footer .right-footer .btn-check:disabled + input[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -4144,11 +4143,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group .wpcf7 input[type=submit], .wpcf7 .input-group input[type=submit], .input-group footer .right-footer input[type=submit], footer .right-footer .input-group input[type=submit] {
+.input-group .btn, .input-group .wpcf7 input[type=submit], .wpcf7 .input-group input[type=submit], .input-group .single-post .entry-content .wp-element-button, .single-post .entry-content .input-group .wp-element-button, .input-group .home #index-wrapper .bg-primary .container .wp-element-button, .home #index-wrapper .bg-primary .container .input-group .wp-element-button, .input-group footer .right-footer input[type=submit], footer .right-footer .input-group input[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .wpcf7 input[type=submit]:focus, .wpcf7 .input-group input[type=submit]:focus, .input-group footer .right-footer input[type=submit]:focus, footer .right-footer .input-group input[type=submit]:focus {
+.input-group .btn:focus, .input-group .wpcf7 input[type=submit]:focus, .wpcf7 .input-group input[type=submit]:focus, .input-group .single-post .entry-content .wp-element-button:focus, .single-post .entry-content .input-group .wp-element-button:focus, .input-group .home #index-wrapper .bg-primary .container .wp-element-button:focus, .home #index-wrapper .bg-primary .container .input-group .wp-element-button:focus, .input-group footer .right-footer input[type=submit]:focus, footer .right-footer .input-group input[type=submit]:focus {
   z-index: 5;
 }
 
@@ -4188,6 +4187,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
+.single-post .entry-content .input-group-lg > .wp-element-button,
+.home #index-wrapper .bg-primary .container .input-group-lg > .wp-element-button,
 footer .right-footer .input-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -4215,6 +4216,8 @@ footer .right-footer .input-group-lg > input[type=submit] {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
+.single-post .entry-content .input-group-sm > .wp-element-button,
+.home #index-wrapper .bg-primary .container .input-group-sm > .wp-element-button,
 footer .right-footer .input-group-sm > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -4798,7 +4801,7 @@ footer .right-footer .input-group-sm > input[type=submit] {
   z-index: 4;
 }
 
-.btn, .wpcf7 input[type=submit], footer .right-footer input[type=submit] {
+.btn, .wpcf7 input[type=submit], .single-post .entry-content .wp-element-button, .home #index-wrapper .bg-primary .container .wp-element-button, footer .right-footer input[type=submit] {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -4834,41 +4837,41 @@ footer .right-footer .input-group-sm > input[type=submit] {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .wpcf7 input[type=submit], footer .right-footer input[type=submit] {
+  .btn, .wpcf7 input[type=submit], .single-post .entry-content .wp-element-button, .home #index-wrapper .bg-primary .container .wp-element-button, footer .right-footer input[type=submit] {
     transition: none;
   }
 }
-.btn:hover, .wpcf7 input[type=submit]:hover, footer .right-footer input[type=submit]:hover {
+.btn:hover, .wpcf7 input[type=submit]:hover, .single-post .entry-content .wp-element-button:hover, .home #index-wrapper .bg-primary .container .wp-element-button:hover, footer .right-footer input[type=submit]:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, .wpcf7 .btn-check + input[type=submit]:hover, footer .right-footer .btn-check + input[type=submit]:hover {
+.btn-check + .btn:hover, .wpcf7 .btn-check + input[type=submit]:hover, .single-post .entry-content .btn-check + .wp-element-button:hover, .home #index-wrapper .bg-primary .container .btn-check + .wp-element-button:hover, footer .right-footer .btn-check + input[type=submit]:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, .wpcf7 input[type=submit]:focus-visible, footer .right-footer input[type=submit]:focus-visible {
+.btn:focus-visible, .wpcf7 input[type=submit]:focus-visible, .single-post .entry-content .wp-element-button:focus-visible, .home #index-wrapper .bg-primary .container .wp-element-button:focus-visible, footer .right-footer input[type=submit]:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, .wpcf7 .btn-check:focus-visible + input[type=submit], footer .right-footer .btn-check:focus-visible + input[type=submit] {
+.btn-check:focus-visible + .btn, .wpcf7 .btn-check:focus-visible + input[type=submit], .single-post .entry-content .btn-check:focus-visible + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-check:focus-visible + .wp-element-button, footer .right-footer .btn-check:focus-visible + input[type=submit] {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, .wpcf7 .btn-check:checked + input[type=submit], footer .right-footer .btn-check:checked + input[type=submit], :not(.btn-check) + .btn:active, .wpcf7 :not(.btn-check) + input[type=submit]:active, footer .right-footer :not(.btn-check) + input[type=submit]:active, .btn:first-child:active, .wpcf7 input[type=submit]:first-child:active, footer .right-footer input[type=submit]:first-child:active, .btn.active, .wpcf7 input.active[type=submit], footer .right-footer input.active[type=submit], .btn.show, .wpcf7 input.show[type=submit], footer .right-footer input.show[type=submit] {
+.btn-check:checked + .btn, .wpcf7 .btn-check:checked + input[type=submit], .single-post .entry-content .btn-check:checked + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-check:checked + .wp-element-button, footer .right-footer .btn-check:checked + input[type=submit], :not(.btn-check) + .btn:active, .wpcf7 :not(.btn-check) + input[type=submit]:active, .single-post .entry-content :not(.btn-check) + .wp-element-button:active, .home #index-wrapper .bg-primary .container :not(.btn-check) + .wp-element-button:active, footer .right-footer :not(.btn-check) + input[type=submit]:active, .btn:first-child:active, .wpcf7 input[type=submit]:first-child:active, .single-post .entry-content .wp-element-button:first-child:active, .home #index-wrapper .bg-primary .container .wp-element-button:first-child:active, footer .right-footer input[type=submit]:first-child:active, .btn.active, .wpcf7 input.active[type=submit], .single-post .entry-content .active.wp-element-button, .home #index-wrapper .bg-primary .container .active.wp-element-button, footer .right-footer input.active[type=submit], .btn.show, .wpcf7 input.show[type=submit], .single-post .entry-content .show.wp-element-button, .home #index-wrapper .bg-primary .container .show.wp-element-button, footer .right-footer input.show[type=submit] {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, .wpcf7 .btn-check:checked + input[type=submit]:focus-visible, footer .right-footer .btn-check:checked + input[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .wpcf7 :not(.btn-check) + input[type=submit]:active:focus-visible, footer .right-footer :not(.btn-check) + input[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, .wpcf7 input[type=submit]:first-child:active:focus-visible, footer .right-footer input[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, .wpcf7 input.active[type=submit]:focus-visible, footer .right-footer input.active[type=submit]:focus-visible, .btn.show:focus-visible, .wpcf7 input.show[type=submit]:focus-visible, footer .right-footer input.show[type=submit]:focus-visible {
+.btn-check:checked + .btn:focus-visible, .wpcf7 .btn-check:checked + input[type=submit]:focus-visible, .single-post .entry-content .btn-check:checked + .wp-element-button:focus-visible, .home #index-wrapper .bg-primary .container .btn-check:checked + .wp-element-button:focus-visible, footer .right-footer .btn-check:checked + input[type=submit]:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .wpcf7 :not(.btn-check) + input[type=submit]:active:focus-visible, .single-post .entry-content :not(.btn-check) + .wp-element-button:active:focus-visible, .home #index-wrapper .bg-primary .container :not(.btn-check) + .wp-element-button:active:focus-visible, footer .right-footer :not(.btn-check) + input[type=submit]:active:focus-visible, .btn:first-child:active:focus-visible, .wpcf7 input[type=submit]:first-child:active:focus-visible, .single-post .entry-content .wp-element-button:first-child:active:focus-visible, .home #index-wrapper .bg-primary .container .wp-element-button:first-child:active:focus-visible, footer .right-footer input[type=submit]:first-child:active:focus-visible, .btn.active:focus-visible, .wpcf7 input.active[type=submit]:focus-visible, .single-post .entry-content .active.wp-element-button:focus-visible, .home #index-wrapper .bg-primary .container .active.wp-element-button:focus-visible, footer .right-footer input.active[type=submit]:focus-visible, .btn.show:focus-visible, .wpcf7 input.show[type=submit]:focus-visible, .single-post .entry-content .show.wp-element-button:focus-visible, .home #index-wrapper .bg-primary .container .show.wp-element-button:focus-visible, footer .right-footer input.show[type=submit]:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .wpcf7 input[type=submit]:disabled, footer .right-footer input[type=submit]:disabled, .btn.disabled, .wpcf7 input.disabled[type=submit], footer .right-footer input.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled .wpcf7 input[type=submit], .wpcf7 fieldset:disabled input[type=submit], fieldset:disabled footer .right-footer input[type=submit], footer .right-footer fieldset:disabled input[type=submit] {
+.btn:disabled, .wpcf7 input[type=submit]:disabled, .single-post .entry-content .wp-element-button:disabled, .home #index-wrapper .bg-primary .container .wp-element-button:disabled, footer .right-footer input[type=submit]:disabled, .btn.disabled, .wpcf7 input.disabled[type=submit], .single-post .entry-content .disabled.wp-element-button, .home #index-wrapper .bg-primary .container .disabled.wp-element-button, footer .right-footer input.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled .wpcf7 input[type=submit], .wpcf7 fieldset:disabled input[type=submit], fieldset:disabled .single-post .entry-content .wp-element-button, .single-post .entry-content fieldset:disabled .wp-element-button, fieldset:disabled .home #index-wrapper .bg-primary .container .wp-element-button, .home #index-wrapper .bg-primary .container fieldset:disabled .wp-element-button, fieldset:disabled footer .right-footer input[type=submit], footer .right-footer fieldset:disabled input[type=submit] {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -4910,7 +4913,7 @@ footer .right-footer .input-group-sm > input[type=submit] {
   --bs-btn-disabled-border-color: #e7408f;
 }
 
-.btn-primary, footer .right-footer input[type=submit] {
+.btn-primary, .wpcf7 input[type=submit], .single-post .entry-content .wp-element-button, footer .right-footer input[type=submit] {
   --bs-btn-color: #000;
   --bs-btn-bg: #25aae1;
   --bs-btn-border-color: #25aae1;
@@ -5272,14 +5275,14 @@ footer .right-footer .input-group-sm > input[type=submit] {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], footer .right-footer .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .single-post .entry-content .btn-group-lg > .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group-lg > .wp-element-button, footer .right-footer .btn-group-lg > input[type=submit] {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], footer .right-footer .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .single-post .entry-content .btn-group-sm > .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group-sm > .wp-element-button, footer .right-footer .btn-group-sm > input[type=submit] {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -5646,46 +5649,70 @@ footer .right-footer .input-group-sm > input[type=submit] {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .wpcf7 .btn-group > input[type=submit], footer .right-footer .btn-group > input[type=submit],
+.btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .single-post .entry-content .btn-group > .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group > .wp-element-button, footer .right-footer .btn-group > input[type=submit],
 .btn-group-vertical > .btn,
 .wpcf7 .btn-group-vertical > input[type=submit],
+.single-post .entry-content .btn-group-vertical > .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button,
 footer .right-footer .btn-group-vertical > input[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .wpcf7 .btn-group > .btn-check:checked + input[type=submit], footer .right-footer .btn-group > .btn-check:checked + input[type=submit],
+.btn-group > .btn-check:checked + .btn, .wpcf7 .btn-group > .btn-check:checked + input[type=submit], .single-post .entry-content .btn-group > .btn-check:checked + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group > .btn-check:checked + .wp-element-button, footer .right-footer .btn-group > .btn-check:checked + input[type=submit],
 .btn-group > .btn-check:focus + .btn,
 .wpcf7 .btn-group > .btn-check:focus + input[type=submit],
+.single-post .entry-content .btn-group > .btn-check:focus + .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group > .btn-check:focus + .wp-element-button,
 footer .right-footer .btn-group > .btn-check:focus + input[type=submit],
 .btn-group > .btn:hover,
 .wpcf7 .btn-group > input[type=submit]:hover,
+.single-post .entry-content .btn-group > .wp-element-button:hover,
+.home #index-wrapper .bg-primary .container .btn-group > .wp-element-button:hover,
 footer .right-footer .btn-group > input[type=submit]:hover,
 .btn-group > .btn:focus,
 .wpcf7 .btn-group > input[type=submit]:focus,
+.single-post .entry-content .btn-group > .wp-element-button:focus,
+.home #index-wrapper .bg-primary .container .btn-group > .wp-element-button:focus,
 footer .right-footer .btn-group > input[type=submit]:focus,
 .btn-group > .btn:active,
 .wpcf7 .btn-group > input[type=submit]:active,
+.single-post .entry-content .btn-group > .wp-element-button:active,
+.home #index-wrapper .bg-primary .container .btn-group > .wp-element-button:active,
 footer .right-footer .btn-group > input[type=submit]:active,
 .btn-group > .btn.active,
 .wpcf7 .btn-group > input.active[type=submit],
+.single-post .entry-content .btn-group > .active.wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group > .active.wp-element-button,
 footer .right-footer .btn-group > input.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
 .wpcf7 .btn-group-vertical > .btn-check:checked + input[type=submit],
+.single-post .entry-content .btn-group-vertical > .btn-check:checked + .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .btn-check:checked + .wp-element-button,
 footer .right-footer .btn-group-vertical > .btn-check:checked + input[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
 .wpcf7 .btn-group-vertical > .btn-check:focus + input[type=submit],
+.single-post .entry-content .btn-group-vertical > .btn-check:focus + .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .btn-check:focus + .wp-element-button,
 footer .right-footer .btn-group-vertical > .btn-check:focus + input[type=submit],
 .btn-group-vertical > .btn:hover,
 .wpcf7 .btn-group-vertical > input[type=submit]:hover,
+.single-post .entry-content .btn-group-vertical > .wp-element-button:hover,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button:hover,
 footer .right-footer .btn-group-vertical > input[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
 .wpcf7 .btn-group-vertical > input[type=submit]:focus,
+.single-post .entry-content .btn-group-vertical > .wp-element-button:focus,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button:focus,
 footer .right-footer .btn-group-vertical > input[type=submit]:focus,
 .btn-group-vertical > .btn:active,
 .wpcf7 .btn-group-vertical > input[type=submit]:active,
+.single-post .entry-content .btn-group-vertical > .wp-element-button:active,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button:active,
 footer .right-footer .btn-group-vertical > input[type=submit]:active,
 .btn-group-vertical > .btn.active,
 .wpcf7 .btn-group-vertical > input.active[type=submit],
+.single-post .entry-content .btn-group-vertical > .active.wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .active.wp-element-button,
 footer .right-footer .btn-group-vertical > input.active[type=submit] {
   z-index: 1;
 }
@@ -5702,26 +5729,34 @@ footer .right-footer .btn-group-vertical > input.active[type=submit] {
 .btn-group {
   border-radius: 0.375rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn, .wpcf7 .btn-group > :not(.btn-check:first-child) + input[type=submit], footer .right-footer .btn-group > :not(.btn-check:first-child) + input[type=submit],
+.btn-group > :not(.btn-check:first-child) + .btn, .wpcf7 .btn-group > :not(.btn-check:first-child) + input[type=submit], .single-post .entry-content .btn-group > :not(.btn-check:first-child) + .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group > :not(.btn-check:first-child) + .wp-element-button, footer .right-footer .btn-group > :not(.btn-check:first-child) + input[type=submit],
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), footer .right-footer .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), .single-post .entry-content .btn-group > .wp-element-button:not(:last-child):not(.dropdown-toggle), .home #index-wrapper .bg-primary .container .btn-group > .wp-element-button:not(:last-child):not(.dropdown-toggle), footer .right-footer .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
 .wpcf7 .btn-group > input.dropdown-toggle-split[type=submit]:first-child,
+.single-post .entry-content .btn-group > .dropdown-toggle-split.wp-element-button:first-child,
+.home #index-wrapper .bg-primary .container .btn-group > .dropdown-toggle-split.wp-element-button:first-child,
 footer .right-footer .btn-group > input.dropdown-toggle-split[type=submit]:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
 .wpcf7 .btn-group > .btn-group:not(:last-child) > input[type=submit],
+.single-post .entry-content .btn-group > .btn-group:not(:last-child) > .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group > .btn-group:not(:last-child) > .wp-element-button,
 footer .right-footer .btn-group > .btn-group:not(:last-child) > input[type=submit] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), .wpcf7 .btn-group > input[type=submit]:nth-child(n+3), footer .right-footer .btn-group > input[type=submit]:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .wpcf7 .btn-group > input[type=submit]:nth-child(n+3), .single-post .entry-content .btn-group > .wp-element-button:nth-child(n+3), .home #index-wrapper .bg-primary .container .btn-group > .wp-element-button:nth-child(n+3), footer .right-footer .btn-group > input[type=submit]:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .wpcf7 .btn-group > :not(.btn-check) + input[type=submit],
+.single-post .entry-content .btn-group > :not(.btn-check) + .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group > :not(.btn-check) + .wp-element-button,
 footer .right-footer .btn-group > :not(.btn-check) + input[type=submit],
 .btn-group > .btn-group:not(:first-child) > .btn,
 .wpcf7 .btn-group > .btn-group:not(:first-child) > input[type=submit],
+.single-post .entry-content .btn-group > .btn-group:not(:first-child) > .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group > .btn-group:not(:first-child) > .wp-element-button,
 footer .right-footer .btn-group > .btn-group:not(:first-child) > input[type=submit] {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -5738,12 +5773,12 @@ footer .right-footer .btn-group > .btn-group:not(:first-child) > input[type=subm
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, footer .right-footer .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .single-post .entry-content .btn-group-sm > .wp-element-button + .dropdown-toggle-split, .home #index-wrapper .bg-primary .container .btn-group-sm > .wp-element-button + .dropdown-toggle-split, footer .right-footer .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, footer .right-footer .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .single-post .entry-content .btn-group-lg > .wp-element-button + .dropdown-toggle-split, .home #index-wrapper .bg-primary .container .btn-group-lg > .wp-element-button + .dropdown-toggle-split, footer .right-footer .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -5753,24 +5788,28 @@ footer .right-footer .btn-group > .btn-group:not(:first-child) > input[type=subm
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .wpcf7 .btn-group-vertical > input[type=submit], footer .right-footer .btn-group-vertical > input[type=submit],
+.btn-group-vertical > .btn, .wpcf7 .btn-group-vertical > input[type=submit], .single-post .entry-content .btn-group-vertical > .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button, footer .right-footer .btn-group-vertical > input[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child), footer .right-footer .btn-group-vertical > input[type=submit]:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child), .single-post .entry-content .btn-group-vertical > .wp-element-button:not(:first-child), .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button:not(:first-child), footer .right-footer .btn-group-vertical > input[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), footer .right-footer .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), .single-post .entry-content .btn-group-vertical > .wp-element-button:not(:last-child):not(.dropdown-toggle), .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button:not(:last-child):not(.dropdown-toggle), footer .right-footer .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
 .wpcf7 .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit],
+.single-post .entry-content .btn-group-vertical > .btn-group:not(:last-child) > .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .btn-group:not(:last-child) > .wp-element-button,
 footer .right-footer .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit] {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, .wpcf7 .btn-group-vertical > input[type=submit] ~ .btn, .wpcf7 .btn-group-vertical > .btn ~ input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] ~ input[type=submit], footer .right-footer .btn-group-vertical > input[type=submit] ~ .btn, footer .right-footer .btn-group-vertical > .btn ~ input[type=submit], footer .right-footer .btn-group-vertical > input[type=submit] ~ input[type=submit],
+.btn-group-vertical > .btn ~ .btn, .wpcf7 .btn-group-vertical > input[type=submit] ~ .btn, .wpcf7 .btn-group-vertical > .btn ~ input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] ~ input[type=submit], .single-post .entry-content .btn-group-vertical > .wp-element-button ~ .btn, .single-post .entry-content .wpcf7 .btn-group-vertical > .wp-element-button ~ input[type=submit], .wpcf7 .single-post .entry-content .btn-group-vertical > .wp-element-button ~ input[type=submit], .single-post .entry-content .btn-group-vertical > .btn ~ .wp-element-button, .single-post .entry-content .wpcf7 .btn-group-vertical > input[type=submit] ~ .wp-element-button, .wpcf7 .single-post .entry-content .btn-group-vertical > input[type=submit] ~ .wp-element-button, .single-post .entry-content .btn-group-vertical > .wp-element-button ~ .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button ~ .btn, .home #index-wrapper .bg-primary .container .wpcf7 .btn-group-vertical > .wp-element-button ~ input[type=submit], .wpcf7 .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button ~ input[type=submit], .home #index-wrapper .bg-primary .container .btn-group-vertical > .btn ~ .wp-element-button, .home #index-wrapper .bg-primary .container .wpcf7 .btn-group-vertical > input[type=submit] ~ .wp-element-button, .wpcf7 .home #index-wrapper .bg-primary .container .btn-group-vertical > input[type=submit] ~ .wp-element-button, .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button ~ .wp-element-button, footer .right-footer .btn-group-vertical > input[type=submit] ~ .btn, footer .right-footer .single-post .entry-content .btn-group-vertical > input[type=submit] ~ .wp-element-button, .single-post .entry-content footer .right-footer .btn-group-vertical > input[type=submit] ~ .wp-element-button, footer .right-footer .home #index-wrapper .bg-primary .container .btn-group-vertical > input[type=submit] ~ .wp-element-button, .home #index-wrapper .bg-primary .container footer .right-footer .btn-group-vertical > input[type=submit] ~ .wp-element-button, footer .right-footer .btn-group-vertical > .btn ~ input[type=submit], footer .right-footer .single-post .entry-content .btn-group-vertical > .wp-element-button ~ input[type=submit], .single-post .entry-content footer .right-footer .btn-group-vertical > .wp-element-button ~ input[type=submit], footer .right-footer .home #index-wrapper .bg-primary .container .btn-group-vertical > .wp-element-button ~ input[type=submit], .home #index-wrapper .bg-primary .container footer .right-footer .btn-group-vertical > .wp-element-button ~ input[type=submit], footer .right-footer .btn-group-vertical > input[type=submit] ~ input[type=submit],
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
 .wpcf7 .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit],
+.single-post .entry-content .btn-group-vertical > .btn-group:not(:first-child) > .wp-element-button,
+.home #index-wrapper .bg-primary .container .btn-group-vertical > .btn-group:not(:first-child) > .wp-element-button,
 footer .right-footer .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -8247,7 +8286,7 @@ footer .right-footer .btn-group-vertical > .btn-group:not(:first-child) > input[
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .wpcf7 input.placeholder[type=submit]::before, footer .right-footer input.placeholder[type=submit]::before {
+.placeholder.btn::before, .wpcf7 input.placeholder[type=submit]::before, .single-post .entry-content .placeholder.wp-element-button::before, .home #index-wrapper .bg-primary .container .placeholder.wp-element-button::before, footer .right-footer input.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -21712,7 +21751,7 @@ p .xs {
   background-repeat: no-repeat;
 }
 
-.btn, .wpcf7 input[type=submit], footer .right-footer input[type=submit] {
+.btn, .wpcf7 input[type=submit], .single-post .entry-content .wp-element-button, .home #index-wrapper .bg-primary .container .wp-element-button, footer .right-footer input[type=submit] {
   border-radius: 20px 0;
   color: #fff;
   transition: all 0.5s;
@@ -21722,10 +21761,10 @@ p .xs {
   border: 1px solid #25aae1;
   background-color: #25aae1;
 }
-.btn i, .wpcf7 input[type=submit] i, footer .right-footer input[type=submit] i {
+.btn i, .wpcf7 input[type=submit] i, .single-post .entry-content .wp-element-button i, .home #index-wrapper .bg-primary .container .wp-element-button i, footer .right-footer input[type=submit] i {
   margin-right: 5px;
 }
-.btn:hover, .wpcf7 input[type=submit]:hover, footer .right-footer input[type=submit]:hover {
+.btn:hover, .wpcf7 input[type=submit]:hover, .single-post .entry-content .wp-element-button:hover, .home #index-wrapper .bg-primary .container .wp-element-button:hover, footer .right-footer input[type=submit]:hover {
   font-size: 1rem;
   color: #25aae1;
   background-color: #fff;
@@ -21734,6 +21773,11 @@ p .xs {
 #wrapper-navbar #main-nav {
   box-shadow: 0 0 15px 0 rgba(39, 56, 145, 0.4);
   min-height: 115px;
+}
+@media (max-width: 767.98px) {
+  #wrapper-navbar #main-nav {
+    min-height: 0;
+  }
 }
 #wrapper-navbar #main-nav .custom-logo-link {
   width: 200px;
@@ -22087,7 +22131,7 @@ footer .footer-last {
   color: #b8cac8;
   transition: all 0.2s;
 }
-.dropdown-toggle:hover:after {
+.dropdown-toggle.show:after {
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg);
   transform-style: preserve-3d;
 }
@@ -22100,28 +22144,43 @@ footer .footer-last {
 .dropdown .dropdown-menu {
   display: block;
   opacity: 0;
-  margin-top: 10px;
   margin-left: -42px;
   border: none;
   width: 250%;
   padding: 30px 0 25px 35px;
-  top: 0;
   visibility: hidden;
-  transform: translateY(0);
   transition: all 0.3s ease-out;
   box-shadow: 0 25px 25px 0 rgba(206, 198, 192, 0.5);
+  transform: translateY(-100%);
+}
+@media (max-width: 767.98px) {
+  .dropdown .dropdown-menu {
+    display: none;
+  }
+  .dropdown .dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    margin-left: 40px;
+    width: auto;
+    padding: 10px;
+    transform: translateY(0) !important;
+  }
 }
 
-.dropdown:hover > .dropdown-menu,
-.dropend:hover > .dropdown-menu {
+.dropdown-menu.show {
   opacity: 1;
-  top: -267px;
   visibility: visible;
-  transform: translateY(100%);
+  transform: translateY(0);
+  background-color: #fff;
 }
 
 .offcanvas {
   width: 100% !important;
+}
+.offcanvas.show {
+  z-index: 9999;
 }
 .offcanvas .menu-logo {
   display: none;
@@ -22150,7 +22209,7 @@ footer .footer-last {
     text-transform: uppercase;
     font-family: Dosis, sans-serif;
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     line-height: 2rem;
   }
 }
@@ -22170,6 +22229,39 @@ footer .footer-last {
   position: relative;
   background: url("../img/pattern-gauche.png") left 35% no-repeat, url("../img/pattern-droite.png") right 115% no-repeat;
   margin-top: 115px;
+}
+.home #index-wrapper .bg-primary {
+  min-height: calc(100vh - 115px);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .home #index-wrapper .bg-primary {
+    min-height: 0;
+    height: 300px;
+  }
+}
+.home #index-wrapper .bg-primary .container {
+  height: 100%;
+}
+.home #index-wrapper .bg-primary .container h1, .home #index-wrapper .bg-primary .container .h1 {
+  text-transform: uppercase;
+  color: #fff;
+}
+.home #index-wrapper .bg-primary .container p {
+  color: #fff;
+}
+@media (max-width: 1199.98px) {
+  .home #index-wrapper .bg-primary .container .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: auto;
+  }
+}
+.home #index-wrapper .bg-primary .container img {
+  width: auto !important;
+}
+.home #index-wrapper .bg-primary .container .wp-element-button {
+  background-color: #007DB1;
+  padding: 16px 24px;
 }
 .home #index-wrapper .top-banner {
   padding: 0;
@@ -22233,14 +22325,23 @@ footer .footer-last {
   border-radius: 25px 0;
 }
 .home .actus-home .news .link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
 }
 .home .actus-home .news .link .link-content {
   display: flex;
   align-items: center;
   color: #25aae1;
+}
+.home .actus-home .news .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .home .actus-home .news .link .link-content .hidden {
   opacity: 0;
@@ -22256,44 +22357,6 @@ footer .footer-last {
 .home .actus-home .news:hover .link .link-content .hidden {
   opacity: 1;
   transform: translateX(0);
-}
-@media (max-width: 767.98px) {
-  .home .actus-home .news {
-    height: auto !important;
-  }
-}
-.home .actus-home .news h3, .home .actus-home .news .h3 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  text-decoration: none;
-}
-.home .actus-home .news .image {
-  height: 145px;
-  display: inline-flex;
-  width: 100%;
-}
-@media (max-width: 767.98px) {
-  .home .actus-home .news .image {
-    height: auto !important;
-  }
-}
-.home .actus-home .news.first-news {
-  height: 495px;
-  margin-bottom: 0;
-}
-@media (max-width: 767.98px) {
-  .home .actus-home .news.first-news {
-    height: auto !important;
-    margin-bottom: 30px;
-  }
-}
-.home .actus-home .news.first-news .image {
-  height: 330px;
-}
-@media (max-width: 767.98px) {
-  .home .actus-home .news.first-news .image {
-    height: auto !important;
-  }
 }
 
 #actualites .actualites .actualite {
@@ -22320,14 +22383,23 @@ footer .footer-last {
   border-radius: 25px 0;
 }
 #actualites .actualites .actualite .link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
 }
 #actualites .actualites .actualite .link .link-content {
   display: flex;
   align-items: center;
-  color: "primary";
+  color: #25aae1;
+}
+#actualites .actualites .actualite .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #actualites .actualites .actualite .link .link-content .hidden {
   opacity: 0;
@@ -22347,14 +22419,29 @@ footer .footer-last {
 @media (max-width: 767.98px) {
   #actualites .actualites .actualite {
     height: auto;
+    min-height: 430px;
   }
+}
+#actualites .actualites .actualite a {
+  text-decoration: none;
 }
 #actualites .actualites .actualite .image {
   height: 200px;
 }
-#actualites .actualites .actualite h3, #actualites .actualites .actualite .h3 {
+@media (max-width: 767.98px) {
+  #actualites .actualites .actualite .image {
+    height: 150px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  #actualites .actualites .actualite .content {
+    margin-bottom: 40px;
+  }
+}
+#actualites .actualites .actualite h2, #actualites .actualites .actualite .h2 {
   font-size: 1.125rem;
   margin: 0 0 1.5rem !important;
+  line-height: 1.5rem;
 }
 #actualites .actualites .actualite p {
   font-size: 0.875rem;
@@ -22393,6 +22480,20 @@ footer .footer-last {
   color: #101f6b !important;
 }
 
+.single-post h1, .single-post .h1 {
+  line-height: 3.5rem;
+}
+.single-post .entry-content h2, .single-post .entry-content .h2, .single-post .entry-content .wp-element-button {
+  margin: 40px 0;
+}
+.single-post .entry-content h2:after, .single-post .entry-content .h2:after {
+  color: #25aae1;
+}
+.single-post .alignwide {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
 .post-navigation {
   margin-top: 50px;
   padding-top: 50px;
@@ -22405,7 +22506,14 @@ footer .footer-last {
   display: flex;
 }
 
-.home .projet {
+@media (max-width: 767.98px) {
+  .home .projets h2, .home .projets .h2 {
+    margin-bottom: 1.5rem !important;
+    margin-top: 1rem;
+  }
+}
+
+.projets-home .projet {
   box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
   border-radius: 25px 0;
   height: 145px;
@@ -22413,64 +22521,55 @@ footer .footer-last {
   position: relative;
   text-decoration: none !important;
   background: #fff;
-  height: 425px;
-  width: 32%;
-  margin-right: 2%;
 }
-.home .projet .image img {
+.projets-home .projet .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
-.home .projet .image {
+.projets-home .projet .image {
   border-radius: 25px 0;
 }
-.home .projet .image img {
+.projets-home .projet .image img {
   border-radius: 25px 0;
 }
-.home .projet .link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.projets-home .projet .link {
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
 }
-.home .projet .link .link-content {
+.projets-home .projet .link .link-content {
   display: flex;
   align-items: center;
   color: #25aae1;
 }
-.home .projet .link .link-content .hidden {
+.projets-home .projet .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.projets-home .projet .link .link-content .hidden {
   opacity: 0;
   transform: translateX(-100px);
   transition: all 0.5s;
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-.home .projet .link .link-content i {
+.projets-home .projet .link .link-content i {
   margin-left: 20px;
   font-size: 1.5rem;
 }
-.home .projet:hover .link .link-content .hidden {
+.projets-home .projet:hover .link .link-content .hidden {
   opacity: 1;
   transform: translateX(0);
 }
-.home .projet:nth-of-type(3n+3) {
-  margin-right: 0;
-}
-@media (max-width: 767.98px) {
-  .home .projet {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-.home .projet .image {
-  height: 200px;
-}
-.home .projet h3, .home .projet .h3 {
-  font-size: 1.125rem;
-}
-.home .projet p {
-  font-size: 0.875rem;
+.projets-home .projet .content {
+  max-height: 160px;
 }
 
 #projets {
@@ -22501,14 +22600,23 @@ footer .footer-last {
   border-radius: 25px 0;
 }
 #projets .projets .projet .link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
 }
 #projets .projets .projet .link .link-content {
   display: flex;
   align-items: center;
-  color: "primary";
+  color: #25aae1;
+}
+#projets .projets .projet .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #projets .projets .projet .link .link-content .hidden {
   opacity: 0;
@@ -22543,6 +22651,12 @@ footer .footer-last {
 }
 #projets .projets .projet p {
   font-size: 0.875rem;
+}
+#projets .projets .projet .content {
+  max-height: 160px;
+}
+#projets .projets .projet .link {
+  margin-top: 25px;
 }
 #projets .projets .loop-card-uoh .link .link-content {
   color: #bf1d2e !important;
@@ -22658,14 +22772,23 @@ footer .footer-last {
   border-radius: 25px 0;
 }
 .home .bg-uness-40 .portraits swiper-slide .link {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
 }
 .home .bg-uness-40 .portraits swiper-slide .link .link-content {
   display: flex;
   align-items: center;
   color: #25aae1;
+}
+.home .bg-uness-40 .portraits swiper-slide .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .home .bg-uness-40 .portraits swiper-slide .link .link-content .hidden {
   opacity: 0;
@@ -23392,10 +23515,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 * .wpcf7-textarea
 * .wpcf7-submit
 */
-.wpcf7 {
-  max-width: 600px;
-  margin: 0 auto !important;
-}
 .wpcf7 .wpcf7-form p {
   margin-bottom: 1rem;
 }
