@@ -29,6 +29,7 @@
         display: flex;
         justify-content: flex-end;
         width: calc(100% - 20px);
+        text-decoration: none !important;
 
         .link-content {
             &:after {
@@ -58,7 +59,12 @@
                 font-size: 1.5rem;
             }
         }
+
+        a {
+            text-decoration: none;
+        }
     }
+
 
     &:hover {
         .link {

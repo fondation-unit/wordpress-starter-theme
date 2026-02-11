@@ -40,6 +40,7 @@
             swiper-slide {
                 width: 310px !important;
                 text-decoration: none !important;
+                position: relative;
 
                 @include loop-card($primary);
                 height: 370px;
@@ -56,6 +57,15 @@
 
                 a {
                     text-decoration: none !important;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
                 }
 
                 p {
@@ -98,4 +108,91 @@ swiper-container::part(bullet) {
 
 swiper-container::part(bullet-active) {
     background-color: $primary;
+}
+
+
+#single-portrait {
+    h1 {
+        @include point-title(0.6rem, 13px);
+        text-transform: uppercase;
+    }
+
+    @each $color, $value in $theme-colors {
+        &.#{$color} {
+            h2 {
+                &:after {
+                    color: $value !important;
+                }
+            }
+        }
+    }
+
+    .loop-card {
+        @include loop-card();
+        height: 350px;
+        position: sticky;
+        top: 130px;
+
+        @include media-breakpoint-down(md) {
+            height: 250px;
+        }
+        @include media-breakpoint-down(sm) {
+            height: auto;
+        }
+
+        .image {
+            height: 250px;
+            width: 250px;
+
+            @include media-breakpoint-down(md) {
+                width: 175px;
+                height: 175px;
+            }
+        }
+
+        .intro {
+            font-style: italic;
+            line-height: 1;
+        }
+
+        .logo-unt {
+            height: 80px;
+            display: flex;
+
+            @include media-breakpoint-down(md) {
+                height: 75px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+        h3 {
+            @include media-breakpoint-down(md) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .btn-linkedin {
+
+            @each $color, $value in $theme-colors {
+                &-#{$color} {
+                    color: $white;
+                    padding: 5px 10px;
+                    border-radius: 8px;
+                    transition: all .5s;
+                    background-color: $value !important;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+        }
+    }
 }

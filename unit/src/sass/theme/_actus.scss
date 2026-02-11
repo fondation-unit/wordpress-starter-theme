@@ -11,7 +11,7 @@
     .actualites {
         .actualite {
             @include loop-card();
-            height: 200px;
+            height: 210px;
             width: 100%;
 
             @include media-breakpoint-down(md) {
@@ -24,7 +24,7 @@
             }
 
             .image {
-                height: 200px;
+                height: 210px;
                 @include media-breakpoint-down(md) {
                     height: 150px !important;
                 }
@@ -54,6 +54,10 @@
 .single-post{
     h1{
         line-height: 3.5rem;
+
+        @include media-breakpoint-down(md) {
+            line-height: 2rem;
+        }
     }
 
     .entry-content{
@@ -76,6 +80,13 @@
     .alignwide{
         max-width: 100% !important;
         margin: 0 auto !important;
+    }
+    .conclusion{
+        .grey{
+            font-weight: 400;
+            font-size: .95rem;
+            color: #888;
+        }
     }
 }
 

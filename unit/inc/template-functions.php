@@ -166,13 +166,6 @@ function footer_sidebars()
 
 add_action('widgets_init', 'footer_sidebars');
 
-function randomTitleClass()
-{
-    $classes = ['aunege', 'unit', 'uness', 'uoh', 'uved', 'iut'];
-
-    return $classes[array_rand($classes)];
-}
-
 function cleanUrl($url)
 {
     return preg_replace('/https?:\/\/|www.|\/$/', '', $url);
@@ -189,6 +182,8 @@ function createRSIcon($type)
         'Facebook' => 'facebook-f',
         'Linkedin' => 'linkedin-in',
         'Twitter (X)' => 'x-twitter',
+        'Bluesky' => 'bluesky',
+        'Youtube' => 'youtube',
     ];
 
     return '<i class="fa-brands fa-' . $typeIcon[$type] . '"></i>';
@@ -262,3 +257,50 @@ function alter_att_attributes_wpse_102079($attr)
 }
 
 add_filter('wp_get_attachment_image_attributes', 'alter_att_attributes_wpse_102079');
+
+function register_custom_image_sizes()
+{
+    if (! current_theme_supports('post-thumbnails')) {
+        add_theme_support('post-thumbnails');
+    }
+    add_image_size('project-size', 415, 245, true);
+}
+
+add_action('after_setup_theme', 'register_custom_image_sizes');
+
+//====================================================================
+//
+//    ACCES FLAMINGO EDITEURS
+//
+//====================================================================
+add_filter('flamingo_map_meta_cap', 'custom_flamingo_map_meta_cap');
+
+function custom_flamingo_map_meta_cap($meta_caps)
+{
+    $meta_caps = array_merge($meta_caps, [
+        'flamingo_edit_inbound_message' => 'edit_pages',
+        'flamingo_edit_inbound_messages' => 'edit_pages',
+        'flamingo_delete_inbound_message' => 'edit_pages',
+        'flamingo_delete_inbound_messages' => 'edit_pages',
+        'flamingo_spam_inbound_message' => 'edit_pages',
+        'flamingo_unspam_inbound_message' => 'edit_pages',
+        'flamingo_edit_contacts' => 'edit_pages',
+    ]);
+
+    return $meta_caps;
+}
+
+function searchBreadcrumb($get, $num)
+{
+    $breadcrumb = '';
+
+    if (isset($get['recherche']) && ! empty($get['recherche'])) {
+        $breadcrumb .= '"' . $get['recherche'] . '"' . (($num > 0) ? ' - ' : '');
+    }
+
+    if ($num > 0) {
+        $breadcrumb .= $num . ' résultat' . (($num > 1) ? 's' : '');
+    }
+
+    return $breadcrumb;
+}

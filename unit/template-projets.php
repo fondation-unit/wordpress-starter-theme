@@ -21,7 +21,7 @@ $args = [
 ];
 $argsProjets = new WP_Query($args);
 
-
+$container = get_theme_mod('understrap_container_type');
 
 ?>
 
@@ -36,7 +36,7 @@ $argsProjets = new WP_Query($args);
                         <div class="container">
                             <?php
                             the_title(
-                                '<header class="entry-header"><h1 class="entry-title uoh">',
+                                '<header class="entry-header"><h1 class="entry-title unit">',
                                 '</h1></header><!-- .entry-header -->'
                             );
                             ?>
@@ -51,39 +51,41 @@ $argsProjets = new WP_Query($args);
                                                     $argsProjets->the_post();
 
                                                     $photo = get_field('illustration');
-                                                    $desc = get_field('presentation');
+                                                    $desc = get_field('introduction', false, false);
 
                                                     ?>
-                                                    <a href="<?php echo get_permalink(); ?>"
-                                                       class="projet loop-card-uoh">
+                                                    <div class="projet loop-card-unit">
                                                         <div class="image">
 
                                                             <?php
-                                                            if($photo):
-                                                            $size = wp_is_mobile() ? 'medium' : 'medium_large';
-                                                            $imgDatas = altTextForFormationImages($photo, $size);
-                                                                 echo '<img class="attachment-medium_large size-medium_large wp-post-image lozad" src="'
-                                                                    . $imgDatas['src'] . '" alt="' . $imgDatas['alt'] . '">';
+                                                            if ($photo):
+                                                                $size = wp_is_mobile() ? 'medium' : 'project-size';
+                                                                $imgDatas = altTextForFormationImages($photo, $size);
+                                                                echo wp_get_attachment_image($photo['ID'], $size, false,
+                                                                    [
+                                                                        'alt' => '',
+                                                                        'class' => 'wp-post-image lozad',
+                                                                    ]);
                                                             endif;
                                                             ?>
 
                                                         </div>
                                                         <div class="content p-md-4 p-3">
-                                                            <?php the_title('<h3 class="no-point">', '</h3>'); ?>
+                                                            <?php the_title('<h2 class="no-point">', '</h2>'); ?>
                                                             <p>
-                                                                <?php echo limitTitle($desc); ?>
+                                                                <?php echo limitTitle(strip_tags((string) $desc)); ?>
                                                             </p>
                                                         </div>
-                                                        <div class="link">
+                                                        <a href="<?php echo get_permalink(); ?>" class="link">
                                                             <div class="link-content">
                                                                 <span class="sr-only">Voir les détails du
                                                                                       projet</span>
                                                                 <span class="hidden">En savoir plus</span>
-                                                                <i class="icon-fleche-actu-projet"></i>
+                                                                <i class="icon-fleche-actu-projet" aria-hidden="true"></i>
                                                             </div>
-                                                        </div>
+                                                        </a>
 
-                                                    </a>
+                                                    </div>
 
                                                 <?php
                                                 endwhile;
@@ -92,7 +94,7 @@ $argsProjets = new WP_Query($args);
                                             ?>
                                         </div>
                                     </div>
-                                    <div class="Ligne nav-actus pb-md-6 py-4 uoh">
+                                    <div class="Ligne nav-actus pb-md-6 py-4 unit">
                                         <div id="navPages" class="w-100 mt-4">
                                             <?php
                                             $pagination = new Pagination();

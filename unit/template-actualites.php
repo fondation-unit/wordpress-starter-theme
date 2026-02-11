@@ -21,7 +21,7 @@ $args = [
 ];
 $argsActus = new WP_Query($args);
 
-
+$container = get_theme_mod('understrap_container_type');
 ?>
 
     <div id="actualites">
@@ -58,7 +58,7 @@ $argsActus = new WP_Query($args);
                                                             $size = wp_is_mobile() ? 'medium' : 'medium_large';
 
                                                             if (has_post_thumbnail()) {
-                                                                the_post_thumbnail($size, ['class' => 'lozad']);
+                                                                the_post_thumbnail($size, ['class' => 'lozad', 'alt' => '']);
                                                             }
                                                             ?>
 
@@ -82,7 +82,7 @@ $argsActus = new WP_Query($args);
                                                                 <span class="sr-only">Voir les détails du
                                                                                       projet</span>
                                                                 <span class="hidden">En savoir plus</span>
-                                                                <i class="icon-fleche-actu-projet"></i>
+                                                                <i class="icon-fleche-actu-projet" aria-hidden="true"></i>
                                                             </a>
                                                         </div>
 

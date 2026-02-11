@@ -5,17 +5,17 @@
     font-size: 1.125rem;
     font-weight: 500;
     padding: 8px 10px;
-    border: 1px solid $primary;
-    background-color: $primary;
 
-    i{
-        margin-right: 5px;
+    @include media-breakpoint-down(md){
+        font-size: 1rem;
     }
 
     &:hover {
-        font-size: 1rem;
-        color: $primary;
         background-color: #fff;
+    }
+
+    &:focus{
+        border-color: blue !important;
     }
 
     //@each $color, $value in $theme-colors {

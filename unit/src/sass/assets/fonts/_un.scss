@@ -25,8 +25,26 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-rouage:before {
+    content: "\7a";
+}
+.icon-calendrier:before {
+    content: "\78";
+}
+.icon-synthese:before {
+    content: "\79";
+}
+.icon-top-arrow:before {
+    content: "\74";
+}
+.icon-diaporama:before {
+    content: "\64";
+}
 .icon-loupe:before {
     content: "\6c";
+}
+.icon-unit:before {
+    content: "\6e";
 }
 .icon-aunege:before {
     content: "\61";
@@ -36,9 +54,6 @@
 }
 .icon-uness:before {
     content: "\73";
-}
-.icon-unit:before {
-    content: "\6e";
 }
 .icon-uved:before {
     content: "\76";

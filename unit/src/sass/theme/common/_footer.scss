@@ -3,13 +3,15 @@ footer {
         color: $white;
     }
 
-    h3 {
+    h2 {
         margin: 1rem 0 1.5rem !important;
+        font-size: 1.375rem;
+        line-height: 100% !important;
     }
 
     a{
         color: $white;
-        text-decoration: none;
+        text-decoration: underline;
         font-size: 0.875rem;
 
         &:hover{
@@ -70,8 +72,13 @@ footer {
 
     .footer-last{
         font-size: .75rem;
-        margin-top: 1.5rem;
-        color: rgba(255, 255, 255, .4);
+        margin-top: 1.5rem; color: $white;
+    }
+
+    .flex-column{
+        @include media-breakpoint-down(md){
+            columns:2;
+        }
     }
 }
 

@@ -25,9 +25,10 @@
 
         .projet {
             @include loop-card();
-            height: 425px;
+            height: 465px;
             width: 32%;
             margin-right: 2%;
+            z-index: 3;
 
             &:nth-of-type(3n+3) {
                 margin-right: 0;
@@ -39,27 +40,85 @@
             }
 
             .image {
-                height: 200px;
+                height: 245px;
+
+                position: relative;
+                overflow: hidden;
             }
 
-            h3 {
+            h2 {
                 font-size: 1.125rem;
                 margin: 0 0 1.5rem !important;
+                text-decoration: none !important;
+                line-height: 100%;
+                min-height: 41px;
             }
 
             p {
                 font-size: .875rem;
-            }
-
-            .content{
-                max-height: 160px;
+                @include media-breakpoint-down(md) {
+                    line-height: 1.25rem;
+                }
             }
 
             .link {
-                margin-top: 25px;
+                margin-top: -10px;
             }
         }
 
         @include loop-card-color();
+    }
+}
+
+#single-project {
+    .logo {
+        h1{
+            @include point-title(0.6rem, 13px);
+        }
+        img {
+            max-height: 180px;
+
+            @include media-breakpoint-down(md) {
+                width: 75%;
+            }
+        }
+    }
+
+    .introduction {
+        img {
+            border-radius: 20px 0;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .savoirs {
+        @include li-hashtag($primary);
+    }
+
+    .liste-chiffres, .liste-unts {
+        box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+        border-radius: 25px 0 25px 25px;
+        background-color: $white;
+        padding: 50px;
+
+    }
+
+    .liste-chiffres {
+        .chiffre {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+    }
+
+    .liste-unts {
+        width: fit-content;
+
+        .unt {
+            max-width: 150px;
+        }
     }
 }

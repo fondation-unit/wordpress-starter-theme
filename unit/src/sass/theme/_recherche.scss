@@ -1,0 +1,415 @@
+#recherche {
+    #page-wrapper {
+        margin-top: 90px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 70px;
+        }
+
+        .formulaire {
+            margin-top: -40px;
+            height: 80px;
+
+            @include media-breakpoint-down(md) {
+                height: 40px;
+            }
+
+            form {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                background-color: transparent;
+                border-radius: 40px;
+                position: relative;
+                z-index: 2;
+
+                input {
+                    height: 80px;
+                    border-radius: 40px 0 0 40px;
+                    box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+                    width: 90%;
+                    border: none;
+                    padding: 0 30px;
+                    background-color: $white;
+                    font-size: 1.125rem;
+
+                    @include media-breakpoint-down(md) {
+                        height: 40px;
+                        width: 85%;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    width: 10%;
+                    border-radius: 0 40px 40px 0;
+                    background-color: $blue;
+                    border: none;
+                    position: relative;
+                    z-index: 1;
+
+                    @include media-breakpoint-down(md) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 15%;
+                    }
+
+                    i {
+                        font-size: 2.5rem;
+                        color: $white;
+
+                        @include media-breakpoint-down(md) {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            .btn-advanced {
+                width: 17%;
+                text-decoration: none;
+                margin-left: -10%;
+                background-color: #0a5181;
+                border-radius: 0 40px 40px 0;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                height: 100%;
+                padding-right: 26px;
+
+                &.active{
+                    background-color: $primary;
+                }
+
+                @include media-breakpoint-down(md) {
+                    padding-right: 10px;
+                    width: 20%;
+                }
+
+                i {
+                    font-size: 2.5rem;
+                    color: $white;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .liste-resultats {
+
+            @include media-breakpoint-down(md) {
+                margin-top: 2rem;
+            }
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            .resultats {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .select {
+                select {
+                    padding: 0 40px;
+                    height: 45px;
+                    min-width: 155px;
+                    box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+                    border-radius: 20px 0;
+                    border: none;
+                    position: relative;
+                    -moz-appearance: none; /* Firefox */
+                    -webkit-appearance: none; /* Safari and Chrome */
+                    appearance: none;
+                    background: url('../img/fond-select.png') no-repeat 90% center white;
+
+                }
+            }
+        }
+
+        .search-facets {
+            box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+            border-top-right-radius: 20px;
+            background-color: $white;
+            padding: 50px 30px;
+            width: 100%;
+
+            .accordion-item {
+                border-bottom: 1px solid rgba(206, 198, 192, 0.5);
+                padding-bottom: 1rem;
+
+                h2 {
+                    &:after {
+                        display: none;
+                    }
+
+                    margin: 0;
+                }
+
+                .accordion-button {
+                    border: none;
+                    background: none;
+                    font-size: 1.125rem;
+                    //font-weight: 500;
+                    position: relative;
+                    width: 100%;
+                    text-align: left;
+                    font-family: 'Rubik';
+
+                    @include media-breakpoint-down(md) {
+                        padding-top: 12px;
+                    }
+
+                    &:after {
+                        content: "\f078";
+                        font-family: "Font Awesome 6 Free";
+                        position: absolute;
+                        right: 0;
+                        top: 14px;
+                        border-radius: 50%;
+                        background-color: $primary;
+                        color: $white;
+                        height: 25px;
+                        width: 25px;
+                        font-weight: 600;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: .8rem;
+                        transition: all .5s;
+                        transform: rotate(-180deg);
+                    }
+
+                    &.sub {
+                        &:after {
+                            top: 0;
+                            height: 20px;
+                            width: 20px;
+                            opacity: .8;
+                        }
+                    }
+
+                    &.collapsed {
+                        &:after {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    font-size: .8rem;
+                    margin-top: 1rem;
+                }
+
+                .field {
+                    margin-bottom: 1rem;
+                    align-items: center;
+
+                    label {
+                        margin-left: 1rem;
+                        font-size: .8rem;
+                        width: calc(100% - 20px - 1rem);
+
+                    }
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid rgba(206, 198, 192, 0.5);
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        &:checked {
+                            background-color: $primary;
+                            border: 1px solid $primary;
+                            //text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: .8rem;
+
+                            &:after {
+                                content: "\f00c";
+                                font-family: "Font Awesome 6 Free";
+                                color: $white;
+                                font-weight: 600;
+                            }
+
+                            & + label {
+                                .titre {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.sub {
+                    .field {
+                        padding-right: 1rem;
+                    }
+                }
+
+                .second-level {
+
+                    .accordion-body {
+                        padding: 0 1rem;
+                        margin-top: 0;
+
+                        label {
+                            span {
+                                span {
+                                    opacity: .8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .cards {
+            .resultat {
+                @include loop-card();
+                min-height: 365px;
+                width: 48%;
+                margin-right: 4%;
+
+
+                .link {
+                    .link-content {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .external {
+                    text-decoration: none;
+                    padding: 0 20px 0 0;
+
+                    .image {
+                        height: 200px;
+                    }
+
+                    h3 {
+                        margin-top: 1.5rem;
+                        min-height: 100px;
+                        width: 80%;
+                        position: relative;
+                        font-size: 1.125rem;
+                        margin-bottom: 0;
+                        text-decoration: none;
+                        padding: 0 20px;
+
+                        @include media-breakpoint-down(md) {
+                            width: 100%;
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        &:after {
+                            content: "\74";
+                            font-family: 'un';
+                            position: absolute;
+                            right: -22%;
+                            top: 10px;
+                            font-size: 1.5rem;
+                            color: $primary;
+                        }
+                    }
+                }
+
+                &.vignette{
+                    height: 565px;
+
+                    .link {
+                        margin-top: -40px !important;
+                    }
+
+                    .external{
+                        h3{
+                            margin-top: 0.5rem;
+                        }
+                    }
+                }
+
+
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    margin-right: 0;
+                    height: auto;
+                }
+
+                &:nth-of-type(2n+2) {
+                    margin-right: 0;
+                }
+
+                .contenu {
+                    padding: 0 20px 20px;
+                    height: 230px;
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+
+
+                .date {
+                    left: 20px;
+                    position: absolute;
+                    bottom: 20px;
+                    font-size: 0.875rem;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.5rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+
+        .facets-hidden{
+            .cards {
+                .resultat {
+                    width: 32%;
+                    margin-right: 2%;
+
+                    &:nth-of-type(3n+3) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        @each $color, $value in $theme-colors {
+            &.#{$color} {
+                .cards {
+                    .resultat {
+                        .date {
+                            i {
+                                color: $value;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
