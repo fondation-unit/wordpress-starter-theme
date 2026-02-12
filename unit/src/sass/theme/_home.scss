@@ -21,6 +21,10 @@
                 h1 {
                     text-transform: uppercase;
                     color: $white;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: 1.8rem;
+                    }
                 }
 
                 p{
@@ -87,14 +91,20 @@
                     }
                 }
 
-                .btn-uved {
-                    padding: 16px 24px;
+                .btn {
+                    color: $primary;
+                    text-decoration: none;
+                    @include media-breakpoint-up(md) {
+                        padding: 16px 24px;
+                    }
                 }
             }
         }
 
         h2 {
-            margin-bottom: 3rem;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 3rem;
+            }
         }
     }
 }

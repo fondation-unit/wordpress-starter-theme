@@ -1,4 +1,4 @@
-@mixin loop-card($color: $primary) {
+@mixin loop-card($color: $primary){
 
     box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
     border-radius: 25px 0;
@@ -39,9 +39,8 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-
+                text-decoration: none !important;
             }
-
             display: flex;
             align-items: center;
             color: $color;
@@ -58,13 +57,14 @@
                 margin-left: 20px;
                 font-size: 1.5rem;
             }
+
         }
 
         a {
-            text-decoration: none;
+            text-decoration: none !important;
         }
-    }
 
+    }
 
     &:hover {
         .link {
@@ -78,11 +78,11 @@
     }
 }
 
-@mixin loop-card-color() {
+@mixin loop-card-color(){
     @each $color, $value in $theme-colors {
-        .loop-card-#{$color} {
-            .link {
-                .link-content {
+        .loop-card-#{$color}{
+            .link{
+                .link-content{
                     color: $value !important;
                 }
             }

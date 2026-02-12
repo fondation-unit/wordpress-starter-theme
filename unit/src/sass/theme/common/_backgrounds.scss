@@ -42,3 +42,24 @@
     }
 }
 
+
+#page-wrapper{
+    --first-bg: 35%;
+    &.both-bgs{
+        position: relative;
+        background: url('../img/pattern-gauche.png') left 35% no-repeat, url('../img/pattern-droite.png') right 115% no-repeat;
+
+        @include media-breakpoint-down(md){
+            background: none;
+        }
+    }
+
+    &.one-bg{
+        position: relative;
+        background: url('../img/pattern-gauche.png') left 35% no-repeat;
+
+        @include media-breakpoint-down(md){
+            background: none;
+        }
+    }
+}

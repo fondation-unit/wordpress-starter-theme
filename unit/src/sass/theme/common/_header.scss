@@ -107,6 +107,12 @@
                 color: $white;
             }
         }
+
+        .moodle{
+            &:focus{
+                border-color: red !important;
+            }
+        }
     }
 }
 

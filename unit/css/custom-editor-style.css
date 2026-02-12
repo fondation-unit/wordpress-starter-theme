@@ -78,42 +78,42 @@
 }
 
 .bg-primary {
-  background-color: #25aae1 !important;
+  background-color: #0f3f63 !important;
 }
 .bg-primary-30 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(189.6, 229.5, 246);
+  background-color: rgb(183, 197.4, 208.2);
 }
 .bg-primary-40 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(167.8, 221, 243);
+  background-color: rgb(159, 178.2, 192.6);
 }
 .bg-primary-50 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(146, 212.5, 240);
+  background-color: rgb(135, 159, 177);
 }
 .bg-primary-60 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(124.2, 204, 237);
+  background-color: rgb(111, 139.8, 161.4);
 }
 .bg-primary-70 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(102.4, 195.5, 234);
+  background-color: rgb(87, 120.6, 145.8);
 }
 .bg-primary-80 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(80.6, 187, 231);
+  background-color: rgb(63, 101.4, 130.2);
 }
 .bg-primary-90 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(58.8, 178.5, 228);
+  background-color: rgb(39, 82.2, 114.6);
 }
 
 .bg-footer {
@@ -156,42 +156,42 @@
 }
 
 .bg-unit {
-  background-color: #25aae1 !important;
+  background-color: #0f3f63 !important;
 }
 .bg-unit-30 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(189.6, 229.5, 246);
+  background-color: rgb(183, 197.4, 208.2);
 }
 .bg-unit-40 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(167.8, 221, 243);
+  background-color: rgb(159, 178.2, 192.6);
 }
 .bg-unit-50 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(146, 212.5, 240);
+  background-color: rgb(135, 159, 177);
 }
 .bg-unit-60 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(124.2, 204, 237);
+  background-color: rgb(111, 139.8, 161.4);
 }
 .bg-unit-70 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(102.4, 195.5, 234);
+  background-color: rgb(87, 120.6, 145.8);
 }
 .bg-unit-80 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(80.6, 187, 231);
+  background-color: rgb(63, 101.4, 130.2);
 }
 .bg-unit-90 {
   position: relative !important;
   z-index: 5 !important;
-  background-color: rgb(58.8, 178.5, 228);
+  background-color: rgb(39, 82.2, 114.6);
 }
 
 .bg-uness {
@@ -861,9 +861,9 @@ progress {
   --bs-gray-900: #212529;
   --bs-uoh: #bf1d2e;
   --bs-iut: #e7408f;
-  --bs-primary: #25aae1;
+  --bs-primary: #0f3f63;
   --bs-footer: #012D5C;
-  --bs-unit: #25aae1;
+  --bs-unit: #0f3f63;
   --bs-uness: #5ba0a5;
   --bs-aunege: #f7941d;
   --bs-uved: #98c05b;
@@ -872,9 +872,9 @@ progress {
   --bs-dark-blue: #101f6b;
   --bs-uoh-rgb: 191, 29, 46;
   --bs-iut-rgb: 231, 64, 143;
-  --bs-primary-rgb: 37, 170, 225;
+  --bs-primary-rgb: 15, 63, 99;
   --bs-footer-rgb: 1, 45, 92;
-  --bs-unit-rgb: 37, 170, 225;
+  --bs-unit-rgb: 15, 63, 99;
   --bs-uness-rgb: 91, 160, 165;
   --bs-aunege-rgb: 247, 148, 29;
   --bs-uved-rgb: 152, 192, 91;
@@ -904,8 +904,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #25aae1;
-  --bs-link-hover-color: rgb(29.6, 136, 180);
+  --bs-link-color: #0D75BB;
+  --bs-link-hover-color: rgb(10.4, 93.6, 149.6);
   --bs-code-color: #d63384;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
 }
@@ -988,13 +988,13 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: rgb(211.4, 238, 249);
-  --bs-table-border-color: rgb(190.26, 214.2, 224.1);
-  --bs-table-striped-bg: rgb(200.83, 226.1, 236.55);
+  --bs-table-bg: rgb(206.6, 227.4, 241.4);
+  --bs-table-border-color: rgb(185.94, 204.66, 217.26);
+  --bs-table-striped-bg: rgb(196.27, 216.03, 229.33);
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: rgb(190.26, 214.2, 224.1);
+  --bs-table-active-bg: rgb(185.94, 204.66, 217.26);
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: rgb(195.545, 220.15, 230.325);
+  --bs-table-hover-bg: rgb(191.105, 210.345, 223.295);
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -1307,9 +1307,9 @@ progress {
   --bs-gray-900: #212529;
   --bs-uoh: #bf1d2e;
   --bs-iut: #e7408f;
-  --bs-primary: #25aae1;
+  --bs-primary: #0f3f63;
   --bs-footer: #012D5C;
-  --bs-unit: #25aae1;
+  --bs-unit: #0f3f63;
   --bs-uness: #5ba0a5;
   --bs-aunege: #f7941d;
   --bs-uved: #98c05b;
@@ -1318,9 +1318,9 @@ progress {
   --bs-dark-blue: #101f6b;
   --bs-uoh-rgb: 191, 29, 46;
   --bs-iut-rgb: 231, 64, 143;
-  --bs-primary-rgb: 37, 170, 225;
+  --bs-primary-rgb: 15, 63, 99;
   --bs-footer-rgb: 1, 45, 92;
-  --bs-unit-rgb: 37, 170, 225;
+  --bs-unit-rgb: 15, 63, 99;
   --bs-uness-rgb: 91, 160, 165;
   --bs-aunege-rgb: 247, 148, 29;
   --bs-uved-rgb: 152, 192, 91;
@@ -1350,8 +1350,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #25aae1;
-  --bs-link-hover-color: rgb(29.6, 136, 180);
+  --bs-link-color: #0D75BB;
+  --bs-link-hover-color: rgb(10.4, 93.6, 149.6);
   --bs-code-color: #d63384;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
 }
@@ -1373,8 +1373,8 @@ progress {
 }
 
 .text-bg-primary {
-  color: #000 !important;
-  background-color: RGBA(37, 170, 225, var(--bs-bg-opacity, 1)) !important;
+  color: #fff !important;
+  background-color: RGBA(15, 63, 99, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-footer {
@@ -1383,8 +1383,8 @@ progress {
 }
 
 .text-bg-unit {
-  color: #000 !important;
-  background-color: RGBA(37, 170, 225, var(--bs-bg-opacity, 1)) !important;
+  color: #fff !important;
+  background-color: RGBA(15, 63, 99, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-uness {
@@ -1432,10 +1432,10 @@ progress {
 }
 
 .link-primary {
-  color: #25aae1 !important;
+  color: #0f3f63 !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: rgb(80.6, 187, 231) !important;
+  color: rgb(12, 50.4, 79.2) !important;
 }
 
 .link-footer {
@@ -1446,10 +1446,10 @@ progress {
 }
 
 .link-unit {
-  color: #25aae1 !important;
+  color: #0f3f63 !important;
 }
 .link-unit:hover, .link-unit:focus {
-  color: rgb(80.6, 187, 231) !important;
+  color: rgb(12, 50.4, 79.2) !important;
 }
 
 .link-uness {
@@ -11092,16 +11092,16 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: #25aae1;
+  color: #0f3f63;
 }
 
 .has-primary-background-color {
-  background-color: #25aae1;
-  border-color: #25aae1;
+  background-color: #0f3f63;
+  border-color: #0f3f63;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-primary-color {
-  color: #25aae1;
+  color: #0f3f63;
 }
 
 .has-footer-color,
@@ -11120,16 +11120,16 @@ progress {
 
 .has-unit-color,
 .has-unit-color:visited {
-  color: #25aae1;
+  color: #0f3f63;
 }
 
 .has-unit-background-color {
-  background-color: #25aae1;
-  border-color: #25aae1;
+  background-color: #0f3f63;
+  border-color: #0f3f63;
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-unit-color {
-  color: #25aae1;
+  color: #0f3f63;
 }
 
 .has-uness-color,

@@ -57,6 +57,13 @@ $container = get_theme_mod('understrap_container_type');
                             <?php get_template_part('loop-templates/content', 'none'); ?>
 
                         <?php endif; ?>
+                        <div class="Ligne nav-actus pb-md-6 py-4 <?php echo PRIMARY; ?>">
+                            <div id="navPages" class="w-100 mt-4">
+                                <?php
+                                $pagination = new Pagination();
+                                $pagination::render(get_query_var('paged'), max_posts_search()); ?>
+                            </div>
+                        </div>
                     </div>
 
                 </main>

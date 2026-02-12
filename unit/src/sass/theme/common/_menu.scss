@@ -15,8 +15,11 @@
             color: $dark;
             font-size: 1.125rem;
 
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-down(xxl) {
                 font-size: 1rem;
+            }
+
+            @include media-breakpoint-down(xl) {
                 color: $white;
             }
         }
@@ -43,7 +46,8 @@
         vertical-align: 0;
         font-size: 0.8rem;
         margin-left: 5px;
-        color: #b8cac8;
+        //color: #b8cac8;
+        color: #6c757d ;
         transition: all 0.2s;
     }
 
