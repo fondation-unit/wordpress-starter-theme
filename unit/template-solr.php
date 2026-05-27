@@ -12,9 +12,6 @@ $size = getPhotoSize();
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-if ($paged == 1 && !isset($_GET['fiche']) && !isset($_GET['recherche'])) {
-    $_SESSION['random_color'] = randomTitleClass();
-}
 
 if (isset($_GET['fiche'])) {
     $solrReq = new SolrRequest();
@@ -25,7 +22,7 @@ if (isset($_GET['fiche'])) {
 get_header(); ?>
 
     <div id="recherche" class="solr">
-        <div class="wrapper one-bg <?php echo $_SESSION['random_color']; ?>" id="page-wrapper">
+        <div class="wrapper one-bg <?php echo PRIMARY; ?>" id="page-wrapper">
 
             <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 

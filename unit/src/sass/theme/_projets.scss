@@ -121,4 +121,36 @@
             max-width: 150px;
         }
     }
+
+    .competence{
+        a{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            &:before{
+                content: '#';
+                color: $blue;
+                font-size: 1.5rem;
+                padding-right: 2px;
+            }
+        }
+    }
+
+    #actualites{
+        .actualites{
+            .actualite{
+                height: 510px;
+                width: 32%;
+                margin-right: 2%;
+
+                .image{
+                    height: 200px;
+                }
+
+                .content{
+                    height: 330px;
+                }
+            }
+        }
+    }
 }

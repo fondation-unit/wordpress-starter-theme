@@ -8,7 +8,7 @@
 
 define('SOLR_HOSTNAME', 'host.docker.internal');
 define('SOLR_PORT', '8983');
-define('SOLR_PATH', '/solr/UOH');
+define('SOLR_PATH', '/solr/UNIT');
 define('NOTICE_INDEX', 'notices');
 define('AUTOCOMPLETE_INDEX', 'autocomplete');
 define('SUPLOM_INDEX', 'suplom');

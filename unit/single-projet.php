@@ -19,6 +19,9 @@ $enChiffre = get_field('en_chiffres');
 $outro = get_field('outro');
 $unts = get_field('unts');
 
+$actusLiees = get_field('actualites_liees');
+$competences = get_field('competences');
+
 $size = getPhotoSize();
 ?>
 
@@ -148,6 +151,79 @@ $size = getPhotoSize();
                                         $i++;
                                     endforeach;
                                     ?>
+                                </div>
+                            <?php
+                            endif;
+                            ?>
+                            <?php
+                            if ($competences):
+                                ?>
+                                <div class="conclusion">
+                                    <h2>Compétences mises en oeuvre</h2>
+                                    <div class="d-flex flex-md-row flex-column flex-md-wrap">
+                                        <?php
+                                        foreach ($competences as $competence):
+                                            ?>
+                                            <div class="competence me-4">
+                                                <a href="<?php echo get_permalink($competence->ID); ?>"><?php echo $competence->post_title; ?></a>
+                                            </div>
+                                        <?php
+                                        endforeach;
+                                        ?>
+                                    </div>
+                                </div>
+                            <?php
+                            endif;
+                            if ($actusLiees):
+                                ?>
+                                <h2>Les actualités liées</h2>
+                                <div id="actualites">
+                                    <div class="actualites d-flex flex-md-row flex-column">
+                                        <?php
+                                        foreach ($actusLiees as $actu):
+                                            ?>
+                                            <div
+                                                class="actualite d-flex flex-column loop-card-<?php echo PRIMARY; ?>">
+                                                <div class="image">
+
+                                                    <?php
+                                                    $size = wp_is_mobile() ? 'medium' : 'medium_large';
+                                                    if (has_post_thumbnail($actu)) {
+                                                        echo get_the_post_thumbnail($actu->ID, $size,
+                                                            ['class' => 'lozad', 'alt' => '']);
+                                                    }
+                                                    ?>
+
+                                                </div>
+                                                <div class="content p-md-4 p-3">
+                                                    <h2 class="no-point">
+                                                        <?php
+                                                        echo $actu->post_title;
+                                                        ?>
+                                                    </h2>
+                                                    <?php
+                                                    $excerpt = get_the_excerpt($actu->ID);
+                                                    echo '<p>' . ((mb_strlen($excerpt) > 200)
+                                                            ? mb_substr($excerpt,
+                                                                0, 200)
+                                                            . '...' : $excerpt) . '</p>'
+                                                    ?>
+                                                </div>
+                                                <div class="link">
+                                                    <a href="<?php echo get_permalink($actu->ID); ?>"
+                                                       class="link-content">
+                                                        <span class="sr-only">Voir les détails du
+                                                                              projet</span>
+                                                        <span class="hidden">En savoir plus</span>
+                                                        <i class="icon-fleche-actu-projet" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        <?php
+                                        endforeach;
+                                        ?>
+                                    </div>
                                 </div>
                             <?php
                             endif;

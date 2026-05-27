@@ -24,7 +24,7 @@ $breadcrumb = searchBreadcrumb($_GET, $num);
     </div>
     <div class="d-flex flex-md-row flex-column liste-resultats mb-md-5 mb-4">
         <div class="d-flex flex-column col-md-10">
-            <h2 class="<?php echo $_SESSION['random_color']; ?>">Votre recherche</h2>
+            <h2 class="<?php echo PRIMARY; ?>">Votre recherche</h2>
 
             <p class="resultats"><?php echo $breadcrumb; ?></p>
         </div>
@@ -96,7 +96,7 @@ $breadcrumb = searchBreadcrumb($_GET, $num);
                 }
                 ?>
             </div>
-            <div class="Ligne nav-actus pb-md-6 py-4 <?php echo $_SESSION['random_color']; ?>">
+            <div class="Ligne nav-actus pb-md-6 py-4 <?php echo PRIMARY; ?>">
                 <div id="navPages" class="w-100 mt-4">
                     <?php
                     $pagination = new Pagination();

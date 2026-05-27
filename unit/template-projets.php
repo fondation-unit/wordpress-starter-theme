@@ -53,6 +53,7 @@ $container = get_theme_mod('understrap_container_type');
                                                     $photo = get_field('illustration');
                                                     $desc = get_field('introduction', false, false);
 
+
                                                     ?>
                                                     <div class="projet loop-card-unit">
                                                         <div class="image">
@@ -81,7 +82,8 @@ $container = get_theme_mod('understrap_container_type');
                                                                 <span class="sr-only">Voir les détails du
                                                                                       projet</span>
                                                                 <span class="hidden">En savoir plus</span>
-                                                                <i class="icon-fleche-actu-projet" aria-hidden="true"></i>
+                                                                <i class="icon-fleche-actu-projet"
+                                                                   aria-hidden="true"></i>
                                                             </div>
                                                         </a>
 
