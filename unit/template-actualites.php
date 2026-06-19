@@ -19,6 +19,9 @@ $args = [
     'offet' => $offset,
     'paged' => $paged,
 ];
+if(get_the_ID() === REPLAY){
+    $args['cat'] = REPLAY_CAT;
+}
 $argsActus = new WP_Query($args);
 
 $container = get_theme_mod('understrap_container_type');

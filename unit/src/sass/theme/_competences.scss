@@ -1,0 +1,45 @@
+.competences {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .competence {
+        @include loop-card();
+        padding: 25px;
+        width: 19%;
+        margin-right: 2%;
+        justify-content: center;
+        height: 180px;
+
+        .icone {
+            margin-bottom: 1rem;
+            i {
+                font-size: 2rem;
+                color: $blue;
+
+                &.icon-unit-moodle{
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            min-height: 65px;
+            display: flex;
+            align-items: center;
+            transition: .3s all;
+        }
+
+        .link {
+            margin-top: 0;
+            width: 100%;
+        }
+
+        &:hover {
+            h3 {
+                color: $blue;
+            }
+        }
+    }
+}

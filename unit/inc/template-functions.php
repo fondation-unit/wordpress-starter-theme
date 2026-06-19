@@ -7,9 +7,13 @@
 if (site_url() === 'http://unit.test') {
     define('ACTUALITES', 41);
     define('UNT_UN', 14230);
+    define('REPLAY', 14628);
+    define('REPLAY_CAT', 75);
 } else {
     define('ACTUALITES', 41);
     define('UNT_UN', 226);
+    define('REPLAY', 14628);
+    define('REPLAY_CAT', 75);
 }
 
 define('PRIMARY', 'unit');

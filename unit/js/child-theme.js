@@ -58,7 +58,7 @@
 	};
 
 	/*!
-	  * Bootstrap data.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap data.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -138,7 +138,7 @@
 	};
 
 	/*!
-	  * Bootstrap index.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap index.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -425,7 +425,7 @@
 	}
 
 	/*!
-	  * Bootstrap event-handler.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap event-handler.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -678,7 +678,7 @@
 	};
 
 	/*!
-	  * Bootstrap manipulator.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap manipulator.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -755,7 +755,7 @@
 	}
 
 	/*!
-	  * Bootstrap config.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap config.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -827,7 +827,7 @@
 	}
 
 	/*!
-	  * Bootstrap base-component.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap base-component.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -852,7 +852,7 @@
 			  /**
 			   * Constants
 			   */
-			  const VERSION = '5.3.7';
+			  const VERSION = '5.3.8';
 
 			  /**
 			   * Class definition
@@ -929,7 +929,7 @@
 	};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap selector-engine.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1038,7 +1038,7 @@
 	}
 
 	/*!
-	  * Bootstrap component-functions.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap component-functions.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1086,7 +1086,7 @@
 	}
 
 	/*!
-	  * Bootstrap alert.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap alert.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1181,7 +1181,7 @@
 	};
 
 	/*!
-	  * Bootstrap button.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap button.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1271,7 +1271,7 @@
 	};
 
 	/*!
-	  * Bootstrap swipe.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap swipe.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1410,7 +1410,7 @@
 	}
 
 	/*!
-	  * Bootstrap carousel.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap carousel.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1803,7 +1803,7 @@
 	};
 
 	/*!
-	  * Bootstrap collapse.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap collapse.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -3724,7 +3724,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap dropdown.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -3922,9 +3922,6 @@
 		      this._element.setAttribute('aria-expanded', 'false');
 		      Manipulator.removeDataAttribute(this._menu, 'popper');
 		      EventHandler.trigger(this._element, EVENT_HIDDEN, relatedTarget);
-
-		      // Explicitly return focus to the trigger element
-		      this._element.focus();
 		    }
 		    _getConfig(config) {
 		      config = super._getConfig(config);
@@ -4144,7 +4141,7 @@
 	};
 
 	/*!
-	  * Bootstrap backdrop.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap backdrop.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4293,7 +4290,7 @@
 	};
 
 	/*!
-	  * Bootstrap focustrap.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap focustrap.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4416,7 +4413,7 @@
 	};
 
 	/*!
-	  * Bootstrap scrollbar.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap scrollbar.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4533,7 +4530,7 @@
 	}
 
 	/*!
-	  * Bootstrap modal.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap modal.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4858,7 +4855,7 @@
 	};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap offcanvas.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5121,7 +5118,7 @@
 	};
 
 	/*!
-	  * Bootstrap sanitizer.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap sanitizer.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5247,7 +5244,7 @@
 	};
 
 	/*!
-	  * Bootstrap template-factory.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap template-factory.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5402,7 +5399,7 @@
 	}
 
 	/*!
-	  * Bootstrap tooltip.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap tooltip.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5951,7 +5948,7 @@
 	var tooltip = tooltipExports;
 
 	/*!
-	  * Bootstrap popover.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap popover.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6052,7 +6049,7 @@
 	};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap scrollspy.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6332,7 +6329,7 @@
 	};
 
 	/*!
-	  * Bootstrap tab.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap tab.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6622,7 +6619,7 @@
 	};
 
 	/*!
-	  * Bootstrap toast.js v5.3.7 (https://getbootstrap.com/)
+	  * Bootstrap toast.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */

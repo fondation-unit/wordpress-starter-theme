@@ -13,11 +13,12 @@
     .projet {
         @include loop-card($primary);
 
-        .content{
+        .content {
             max-height: 160px;
         }
     }
 }
+
 #projets {
     background: url('../img/pattern-gauche.png') left top no-repeat;
 
@@ -61,6 +62,9 @@
                 }
             }
 
+
+
+
             .link {
                 margin-top: -10px;
             }
@@ -72,9 +76,10 @@
 
 #single-project {
     .logo {
-        h1{
+        h1 {
             @include point-title(0.6rem, 13px);
         }
+
         img {
             max-height: 180px;
 
@@ -122,33 +127,54 @@
         }
     }
 
-    .competence{
-        a{
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            &:before{
-                content: '#';
-                color: $blue;
-                font-size: 1.5rem;
-                padding-right: 2px;
+    .conclusion {
+        .competence {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .icone {
+
+                i {
+                    font-size: 2rem;
+                    color: $blue;
+                    margin-right: 1rem;
+
+                    &.icon-unit-moodle {
+                        font-size: 3.5rem;
+                    }
+                }
             }
         }
     }
 
-    #actualites{
-        .actualites{
-            .actualite{
-                height: 510px;
+    #actualites {
+        .actualites {
+            .actualite {
+                height: 400px;
                 width: 32%;
                 margin-right: 2%;
 
-                .image{
+                .image {
                     height: 200px;
                 }
 
-                .content{
-                    height: 330px;
+                .content {
+                    height: 200px;
+
+                    h3 {
+                        font-size: 1.125rem;
+                        margin: 0 0 1.5rem !important;
+                        line-height: 1.5rem;
+                    }
                 }
             }
         }
