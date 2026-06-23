@@ -52,7 +52,7 @@ $container = get_theme_mod('understrap_container_type');
 
                                                     $photo = get_field('illustration');
                                                     $desc = get_field('introduction', false, false);
-
+                                                    $competences = get_field('competences');
 
                                                     ?>
                                                     <div class="projet loop-card-unit">
@@ -76,6 +76,28 @@ $container = get_theme_mod('understrap_container_type');
                                                             <p>
                                                                 <?php echo limitTitle(strip_tags((string) $desc)); ?>
                                                             </p>
+                                                            <?php
+                                                            if ($competences):
+                                                                ?>
+                                                                <h4 class="mb-3">Compétences mises en oeuvre</h4>
+                                                                <div class="d-flex flex-row">
+                                                                    <?php
+                                                                    foreach ($competences as $competence):
+                                                                        $icone = get_field('classe_icone', $competence->ID);
+                                                                        ?>
+                                                                        <div class="competence-projet d-flex flex-column">
+                                                                            <div class="icone">
+                                                                                <i class="<?php echo $icone ?>"></i>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    <?php
+                                                                    endforeach;
+                                                                    ?>
+                                                                </div>
+                                                            <?php
+                                                            endif;
+                                                            ?>
                                                         </div>
                                                         <a href="<?php echo get_permalink(); ?>" class="link">
                                                             <div class="link-content">

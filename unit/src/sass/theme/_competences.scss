@@ -31,6 +31,14 @@
             transition: .3s all;
         }
 
+        .competence-projet{
+            margin-right: 2rem;
+
+            i{
+                font-size: 1.5rem;
+            }
+        }
+
         .link {
             margin-top: 0;
             width: 100%;
@@ -40,6 +48,58 @@
             h3 {
                 color: $blue;
             }
+        }
+    }
+}
+
+#single-competence{
+    background:  url('../img/pattern-droite.png') right 35% no-repeat;
+
+    .projet {
+        @include loop-card();
+        height: 465px;
+        width: 32%;
+        margin-right: 2%;
+        z-index: 3;
+
+        &:nth-of-type(3n+3) {
+            margin-right: 0;
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .image {
+            height: 245px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 1.125rem;
+            margin: 0 0 1.5rem !important;
+            text-decoration: none !important;
+            line-height: 100%;
+            min-height: 41px;
+        }
+
+        .content{
+            height: 166px;
+
+            p {
+                font-size: .875rem;
+                @include media-breakpoint-down(md) {
+                    line-height: 1.25rem;
+                }
+            }
+        }
+
+
+        .link {
+            margin-top: 0;
         }
     }
 }
