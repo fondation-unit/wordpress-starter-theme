@@ -2,6 +2,16 @@
 .bg-uoh {
   background-color: #bf1d2e !important;
 }
+.bg-uoh-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(248.6, 232.4, 234.1);
+}
+.bg-uoh-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(242.2, 209.8, 213.2);
+}
 .bg-uoh-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -40,6 +50,16 @@
 
 .bg-iut {
   background-color: #e7408f !important;
+}
+.bg-iut-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(252.6, 235.9, 243.8);
+}
+.bg-iut-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(250.2, 216.8, 232.6);
 }
 .bg-iut-30 {
   position: relative !important;
@@ -80,6 +100,16 @@
 .bg-primary {
   background-color: #163f62 !important;
 }
+.bg-primary-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-primary-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
+}
 .bg-primary-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -118,6 +148,16 @@
 
 .bg-footer {
   background-color: #163f62 !important;
+}
+.bg-footer-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-footer-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
 }
 .bg-footer-30 {
   position: relative !important;
@@ -158,6 +198,16 @@
 .bg-unit {
   background-color: #163f62 !important;
 }
+.bg-unit-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-unit-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
+}
 .bg-unit-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -196,6 +246,16 @@
 
 .bg-uness {
   background-color: #5ba0a5 !important;
+}
+.bg-uness-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(238.6, 245.5, 246);
+}
+.bg-uness-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(222.2, 236, 237);
 }
 .bg-uness-30 {
   position: relative !important;
@@ -236,6 +296,16 @@
 .bg-aunege {
   background-color: #f7941d !important;
 }
+.bg-aunege-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(254.2, 244.3, 232.4);
+}
+.bg-aunege-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(253.4, 233.6, 209.8);
+}
 .bg-aunege-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -274,6 +344,16 @@
 
 .bg-uved {
   background-color: #98c05b !important;
+}
+.bg-uved-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(244.7, 248.7, 238.6);
+}
+.bg-uved-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(234.4, 242.4, 222.2);
 }
 .bg-uved-30 {
   position: relative !important;
@@ -314,6 +394,16 @@
 .bg-violet {
   background-color: #7E3F98 !important;
 }
+.bg-violet-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(242.1, 235.8, 244.7);
+}
+.bg-violet-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(229.2, 216.6, 234.4);
+}
 .bg-violet-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -353,6 +443,16 @@
 .bg-blue {
   background-color: #0D75BB !important;
 }
+.bg-blue-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(230.8, 241.2, 248.2);
+}
+.bg-blue-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(206.6, 227.4, 241.4);
+}
 .bg-blue-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -391,6 +491,16 @@
 
 .bg-dark-blue {
   background-color: #101f6b !important;
+}
+.bg-dark-blue-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.1, 232.6, 240.2);
+}
+.bg-dark-blue-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(207.2, 210.2, 225.4);
 }
 .bg-dark-blue-30 {
   position: relative !important;

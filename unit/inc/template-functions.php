@@ -188,6 +188,7 @@ function createRSIcon($type)
         'Twitter (X)' => 'x-twitter',
         'Bluesky' => 'bluesky',
         'Youtube' => 'youtube',
+        'Github' => 'github',
     ];
 
     return '<i class="fa-brands fa-' . $typeIcon[$type] . '"></i>';

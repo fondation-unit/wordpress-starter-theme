@@ -3,6 +3,16 @@
 .bg-uoh {
   background-color: #bf1d2e !important;
 }
+.bg-uoh-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(248.6, 232.4, 234.1);
+}
+.bg-uoh-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(242.2, 209.8, 213.2);
+}
 .bg-uoh-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -41,6 +51,16 @@
 
 .bg-iut {
   background-color: #e7408f !important;
+}
+.bg-iut-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(252.6, 235.9, 243.8);
+}
+.bg-iut-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(250.2, 216.8, 232.6);
 }
 .bg-iut-30 {
   position: relative !important;
@@ -81,6 +101,16 @@
 .bg-primary {
   background-color: #163f62 !important;
 }
+.bg-primary-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-primary-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
+}
 .bg-primary-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -119,6 +149,16 @@
 
 .bg-footer {
   background-color: #163f62 !important;
+}
+.bg-footer-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-footer-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
 }
 .bg-footer-30 {
   position: relative !important;
@@ -159,6 +199,16 @@
 .bg-unit {
   background-color: #163f62 !important;
 }
+.bg-unit-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.7, 235.8, 239.3);
+}
+.bg-unit-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(208.4, 216.6, 223.6);
+}
 .bg-unit-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -197,6 +247,16 @@
 
 .bg-uness {
   background-color: #5ba0a5 !important;
+}
+.bg-uness-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(238.6, 245.5, 246);
+}
+.bg-uness-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(222.2, 236, 237);
 }
 .bg-uness-30 {
   position: relative !important;
@@ -237,6 +297,16 @@
 .bg-aunege {
   background-color: #f7941d !important;
 }
+.bg-aunege-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(254.2, 244.3, 232.4);
+}
+.bg-aunege-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(253.4, 233.6, 209.8);
+}
 .bg-aunege-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -275,6 +345,16 @@
 
 .bg-uved {
   background-color: #98c05b !important;
+}
+.bg-uved-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(244.7, 248.7, 238.6);
+}
+.bg-uved-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(234.4, 242.4, 222.2);
 }
 .bg-uved-30 {
   position: relative !important;
@@ -315,6 +395,16 @@
 .bg-violet {
   background-color: #7E3F98 !important;
 }
+.bg-violet-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(242.1, 235.8, 244.7);
+}
+.bg-violet-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(229.2, 216.6, 234.4);
+}
 .bg-violet-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -354,6 +444,16 @@
 .bg-blue {
   background-color: #0D75BB !important;
 }
+.bg-blue-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(230.8, 241.2, 248.2);
+}
+.bg-blue-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(206.6, 227.4, 241.4);
+}
 .bg-blue-30 {
   position: relative !important;
   z-index: 5 !important;
@@ -392,6 +492,16 @@
 
 .bg-dark-blue {
   background-color: #101f6b !important;
+}
+.bg-dark-blue-10 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(231.1, 232.6, 240.2);
+}
+.bg-dark-blue-20 {
+  position: relative !important;
+  z-index: 5 !important;
+  background-color: rgb(207.2, 210.2, 225.4);
 }
 .bg-dark-blue-30 {
   position: relative !important;
@@ -21821,6 +21931,12 @@ p .xs {
 .bg-white {
   background-color: white !important;
 }
+.bg-white--10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.bg-white--20 {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
 .bg-white--30 {
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
@@ -24938,6 +25054,83 @@ swiper-container::part(bullet-active) {
 }
 #single-competence .projet .link {
   margin-top: 0;
+}
+
+#equipes .equipes .equipe {
+  box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+  border-radius: 25px 0;
+  height: 145px;
+  margin-bottom: 30px;
+  position: relative;
+  text-decoration: none !important;
+  background: #fff;
+}
+#equipes .equipes .equipe .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+#equipes .equipes .equipe .image {
+  border-radius: 25px 0;
+}
+#equipes .equipes .equipe .image img {
+  border-radius: 25px 0;
+}
+#equipes .equipes .equipe .link {
+  margin-top: -55px;
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 20px);
+  text-decoration: none !important;
+}
+#equipes .equipes .equipe .link .link-content:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-decoration: none !important;
+}
+#equipes .equipes .equipe .link .link-content {
+  display: flex;
+  align-items: center;
+  color: #082f55;
+}
+#equipes .equipes .equipe .link .link-content .hidden {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+#equipes .equipes .equipe .link .link-content i {
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+#equipes .equipes .equipe .link a {
+  text-decoration: none !important;
+}
+#equipes .equipes .equipe:hover .link .link-content .hidden {
+  opacity: 1;
+  transform: translateX(0);
+}
+#equipes .equipes .equipe {
+  width: 24%;
+  margin-right: 1%;
+  height: 350px;
+}
+#equipes .equipes .equipe .image {
+  height: 250px;
+}
+#equipes .equipes .equipe .content h2, #equipes .equipes .equipe .content .h2 {
+  font-size: 1.5rem;
+  margin: 0 !important;
+  line-height: 1;
+}
+#equipes .equipes .equipe:nth-of-type(4n+4) {
+  margin-right: 0;
 }
 
 .has-blue-color,
