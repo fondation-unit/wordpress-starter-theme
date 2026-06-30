@@ -25145,6 +25145,10 @@ swiper-container::part(bullet-active) {
   margin-right: 0;
 }
 
+#organigrammes .organigrammes h3, #organigrammes .organigrammes .h3, #organigrammes .organigrammes p {
+  margin-bottom: 0.5rem !important;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0D75BB;

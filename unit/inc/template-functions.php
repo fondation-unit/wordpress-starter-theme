@@ -309,3 +309,31 @@ function searchBreadcrumb($get, $num)
 
     return $breadcrumb;
 }
+
+function getOrganigrammeList()
+{
+    $results = [];
+
+    $postList = get_posts([
+        'post_type' => 'organigramme',
+        'numberposts' => -1,
+        'meta_key' => 'ordre',
+        'orderby' => 'meta_value',
+        'order' => 'ASC',
+        'suppress_filters' => 0,
+    ]);
+
+    $ogs = array_map(function ($ar) { return $ar->organisme; }, $postList);
+    $organismes = array_unique($ogs);
+    $i = 0;
+    foreach ($organismes as $org) {
+        $posts = wp_list_sort(wp_list_filter($postList, ['organisme' => $org]), 'ordre', 'ASC');
+        array_push($results, ['name' => $org]);
+        foreach ($posts as $post) {
+            array_push($results[$i], $post);
+        }
+        $i++;
+    }
+
+    return $results;
+}
