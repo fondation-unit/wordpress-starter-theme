@@ -24921,6 +24921,11 @@ swiper-container::part(bullet-active) {
   justify-content: center;
   height: 180px;
 }
+@media (max-width: 767.98px) {
+  .competences .competence {
+    width: 100%;
+  }
+}
 .competences .competence .icone {
   margin-bottom: 1rem;
 }
@@ -24938,6 +24943,12 @@ swiper-container::part(bullet-active) {
   display: flex;
   align-items: center;
   transition: 0.3s all;
+}
+@media (max-width: 767.98px) {
+  .competences .competence h3, .competences .competence .h3 {
+    text-align: center;
+    justify-content: center;
+  }
 }
 .competences .competence .competence-projet {
   margin-right: 2rem;

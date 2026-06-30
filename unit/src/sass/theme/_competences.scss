@@ -10,13 +10,18 @@
         justify-content: center;
         height: 180px;
 
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+
         .icone {
             margin-bottom: 1rem;
+
             i {
                 font-size: 2rem;
                 color: $blue;
 
-                &.icon-unit-moodle{
+                &.icon-unit-moodle {
                     font-size: 3.5rem;
                 }
             }
@@ -29,12 +34,17 @@
             display: flex;
             align-items: center;
             transition: .3s all;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+                justify-content: center;
+            }
         }
 
-        .competence-projet{
+        .competence-projet {
             margin-right: 2rem;
 
-            i{
+            i {
                 font-size: 1.5rem;
             }
         }
@@ -52,8 +62,8 @@
     }
 }
 
-#single-competence{
-    background:  url('../img/pattern-droite.png') right 35% no-repeat;
+#single-competence {
+    background: url('../img/pattern-droite.png') right 35% no-repeat;
 
     .projet {
         @include loop-card();
@@ -86,7 +96,7 @@
             min-height: 41px;
         }
 
-        .content{
+        .content {
             height: 166px;
 
             p {
@@ -96,7 +106,6 @@
                 }
             }
         }
-
 
         .link {
             margin-top: 0;
