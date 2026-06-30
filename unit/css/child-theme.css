@@ -22780,6 +22780,11 @@ footer .footer-last {
   background: url("../img/pattern-gauche.png") left 35% no-repeat, url("../img/pattern-droite.png") right 115% no-repeat;
   margin-top: 115px;
 }
+@media (max-width: 767.98px) {
+  .home #index-wrapper {
+    margin-top: 85px;
+  }
+}
 .home #index-wrapper .bg-primary {
   min-height: calc(100vh - 115px);
   display: flex;
