@@ -22788,12 +22788,17 @@ footer .footer-last {
 @media (max-width: 767.98px) {
   .home #index-wrapper .bg-primary {
     min-height: 0;
-    height: 300px;
   }
 }
 .home #index-wrapper .bg-primary .container {
   height: 100%;
   background: url("../img/logo_unit_blanc.png") right center no-repeat;
+}
+@media (max-width: 767.98px) {
+  .home #index-wrapper .bg-primary .container {
+    background-size: 30%;
+    background-position: bottom right;
+  }
 }
 .home #index-wrapper .bg-primary .container h1, .home #index-wrapper .bg-primary .container .h1 {
   text-transform: uppercase;
