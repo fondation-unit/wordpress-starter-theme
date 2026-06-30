@@ -22247,9 +22247,6 @@ body .conclusion {
 body .conclusion h2, body .conclusion .h2, body .conclusion h3, body .conclusion .h3 {
   margin: 0 0 1.5rem;
 }
-body.page:not(.home) *:not(#wrapper-footer) p, body.page:not(.home) *:not(#wrapper-footer) li {
-  font-size: 0.875rem;
-}
 body.page:not(.home) *:not(#wrapper-footer) *:not(.conclusion) h2, body.page:not(.home) *:not(#wrapper-footer) *:not(.conclusion) .h2, body.page:not(.home) *:not(#wrapper-footer) *:not(.conclusion) h3, body.page:not(.home) *:not(#wrapper-footer) *:not(.conclusion) .h3 {
   margin: 3rem 0 2rem;
 }
@@ -25121,13 +25118,28 @@ swiper-container::part(bullet-active) {
   margin-right: 1%;
   height: 350px;
 }
+@media (max-width: 767.98px) {
+  #equipes .equipes .equipe {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 #equipes .equipes .equipe .image {
-  height: 250px;
+  height: 220px;
+}
+#equipes .equipes .equipe .image img {
+  -o-object-position: 100% 27%;
+  object-position: 100% 27%;
 }
 #equipes .equipes .equipe .content h2, #equipes .equipes .equipe .content .h2 {
   font-size: 1.5rem;
   margin: 0 !important;
   line-height: 1;
+}
+#equipes .equipes .equipe .content p {
+  line-height: 1;
+  margin-top: 10px;
+  height: 35px;
 }
 #equipes .equipes .equipe:nth-of-type(4n+4) {
   margin-right: 0;

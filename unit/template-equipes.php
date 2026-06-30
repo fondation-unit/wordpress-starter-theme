@@ -34,6 +34,7 @@ $container = get_theme_mod('understrap_container_type');
                                 '<header class="entry-header"><h1 class="entry-title unit">',
                                 '</h1></header><!-- .entry-header -->'
                             );
+                            the_content();
                             ?>
                             <div class="d-flex flex-md-row flex-column">
                                 <section class="equipes w-100">
@@ -75,7 +76,29 @@ $container = get_theme_mod('understrap_container_type');
                                                             if($twitter || $linkedin || $github){
                                                                 ?>
                                                                 <div class="d-flex flex-row">
-
+                                                                    <?php
+                                                                    if($linkedin):
+                                                                        ?>
+                                                                        <div class="col-md-4">
+                                                                            <a href="https://www.linkedin.com/in/<?php echo $linkedin; ?>" target="_blank"><?php echo createRSIcon('Linkedin'); ?></a>
+                                                                        </div>
+                                                                    <?php
+                                                                        endif;
+                                                                        if($twitter):
+                                                                        ?>
+                                                                        <div class="col-md-4">
+                                                                            <a href="<?php echo $twitter; ?>" target="_blank"><?php echo createRSIcon('Twitter (X)'); ?></a>
+                                                                        </div>
+                                                                    <?php
+                                                                        endif;
+                                                                        if($github):
+                                                                        ?>
+                                                                        <div class="col-md-4">
+                                                                            <a href="<?php echo $github; ?>" target="_blank"><?php echo createRSIcon('Github'); ?></a>
+                                                                        </div>
+                                                                    <?php
+                                                                        endif;
+                                                                    ?>
                                                                 </div>
                                                                 <?php
                                                             }
