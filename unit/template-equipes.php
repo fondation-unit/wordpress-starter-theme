@@ -12,7 +12,8 @@ $args = [
     'post_type' => 'equipe',
     'meta_key' => 'ordre',
     'orderby' => 'meta_value',
-    'order' => 'ASC'
+    'order' => 'ASC',
+    'posts_per_page' => -1
 ];
 $argsEquipes = new WP_Query($args);
 
