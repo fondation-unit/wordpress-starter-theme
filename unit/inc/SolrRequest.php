@@ -94,8 +94,11 @@ class SolrRequest
             } else {
                 $multi = [];
                 foreach ($get[$field] as $newField) {
-                    $newField = base64_decode($newField);
-                    $multi[] = $likeCharacter . GenerateFacets::escapeSolrValue($newField) . $likeCharacter;
+                    $cleanField = base64_decode($newField);
+                    if ($field === 'specialites') {
+                        $cleanField = $this->cleanSubSpecilitesField($cleanField);
+                    }
+                    $multi[] = $likeCharacter . GenerateFacets::escapeSolrValue($cleanField) . $likeCharacter;
                 }
                 $this->query->addFilterQuery($field . ":(" . implode(' OR ', $multi) . ")");
             }
@@ -124,21 +127,30 @@ class SolrRequest
         $res = $this->solrRequestFiche($uuid);
         if ($res['response']['numFound'] === 1) {
             $fiche = $res['response']['docs'][0];
-            $contributions = json_decode($fiche->contributions[0]);
             $fiche = [
-                'contributeur' => $contributions->prenom . ' ' . $contributions->nom,
+                'contributeur' => implode(', ', $fiche->auteurs_facet),
                 'keyWords' => implode(', ', $fiche->mots_cles),
                 'levels' => implode(', ', $fiche->niveaux),
+                'types_pedagogiques' => implode(', ', $fiche->types_pedagogiques),
+                'types_documentaires' => implode(', ', $fiche->types_documentaires),
+                'dure_apprentissage' => ! empty($fiche->dure_apprentissage)
+                    ? $this->setDuree($fiche->dure_apprentissage) : $this->setDuree($fiche->dure_execution),
+                'proposition_utilisation' => $fiche->proposition_utilisation[0],
+                'associations_associate' => $this->setAssociates($fiche->associations_associate),
                 'titre' => $fiche->titre[0],
                 'date_publication' => wp_date('d/m/Y', strtotime($fiche->date_publication)),
-                'description' => $fiche->description[0],
-                'droits' => $fiche->droit,
+                'description' => $fiche->description_text,
+                'droit' => $fiche->droit,
+                'logo_droit' => $this->setDroitImg($fiche->droit),
                 'lien' => $fiche->ressource_liens[0],
                 'disciplines' => implode(', ', $fiche->specialites),
                 'porteur' => $this->setPorteur($fiche),
                 'langues' => $this->setLangues($fiche),
-                'vignette' => isset($fiche->vignette) ? 'https://ressources.luniversitenumerique.fr/uploads/images/'.$fiche->vignette : '',
-                'numFound' => $res['response']['numFound']
+                'vignette' => isset($fiche->vignette) ? 'https://ressources.luniversitenumerique.fr/uploads/images/'
+                    . $fiche->vignette : '',
+                'numFound' => $res['response']['numFound'],
+                'suplom' => 'https://oai.luniversitenumerique.fr/joai/provider?verb=GetRecord&metadataPrefix=suplomfr&identifier=sf_'
+                    . $uuid,
             ];
         }
 
@@ -170,7 +182,7 @@ class SolrRequest
             return $porteurData->libelle;
         }
 
-        return implode(', ', $fiche->etablissements_co_editeurs);
+        return ! empty($fiche->etablissements_co_editeurs) ? implode(', ', $fiche->etablissements_co_editeurs) : '';
     }
 
     /**
@@ -201,5 +213,76 @@ class SolrRequest
         }
 
         return ucfirst(implode(', ', $langues));
+    }
+
+    private function setDuree($duree)
+    {
+        if (! empty($duree)) {
+            $duree = mb_substr($duree, 2, mb_strlen($duree));
+
+            return strtolower($duree);
+        }
+
+        return $duree;
+    }
+
+    private function setAssociates($associates)
+    {
+        if (isset($associates[0])) {
+            $returnAssociates = [];
+            foreach ($associates as $ass) {
+                $returnAssociates[] = json_decode($ass);
+            }
+
+            return $returnAssociates;
+        }
+
+        return $associates;
+    }
+
+    private function setDroitImg($droit)
+    {
+        $droitToImage = [
+            'Licence Creative Commons CC BY-NC-ND (Attribution – Pas d’utilisation commerciale – Pas de modifications)' => [
+                'img' => 'by-nc-nd.webp', 'lien' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
+            ]
+            ,
+            'Licence Creative Commons CC BY-NC (Attribution – Pas d’utilisation commerciale)' => [
+                'img' => 'by-nc.webp', 'lien' => 'https://creativecommons.org/licenses/by-nc/4.0/',
+            ]
+            ,
+            'Tous droits réservés' => ['img' => 'droits-reserves-editeurs.png', 'lien' => ''],
+
+            'Licence Creative Commons CC BY-NC-SA (Attribution – Pas d’utilisation commerciale – Partage dans les mêmes conditions.' => [
+                'img' => 'by-nc-sa.webp', 'lien' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+            ]
+            ,
+
+            'Licence CeCILL version 2' => [
+                'img' => 'bancecill.webp',
+                'lien' => 'https://cecill.info/licences/Licence_CeCILL_V2-fr.html',
+            ],
+
+            'Licence Creative Commons CC BY (Attribution)' => [
+                'img' => 'by.webp',
+                'lien' => 'https://creativecommons.org/licenses/by/4.0/',
+            ],
+
+            'Licence Creative Commons CC BY-ND (Attribution – Pas de modification)' => [
+                'img' => 'by-nd.webp', 'lien' => 'https://creativecommons.org/licenses/by-nd/4.0/',
+            ],
+
+            'Licence Creative Commons CC BY-SA (Attribution – Partage dans les mêmes conditions)' => [
+                'img' => 'by-sa.webp', 'lien' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+
+            ],
+
+            'Paternité Pas d\'utilisation commerciale Pas de modification' => [
+                'img' => 'by-nc-nd.webp', 'lien' => 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
+            ],
+
+        ];
+
+        return $droitToImage[$droit];
     }
 }

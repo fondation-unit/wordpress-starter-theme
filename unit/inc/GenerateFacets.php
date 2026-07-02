@@ -2,10 +2,10 @@
 
 class GenerateFacets
 {
-    public $facets = [];
-
     public $disciplinesArray = [];
+
     public $niveauxArray = [];
+
     public $typesArray = [];
 
     /**
@@ -15,9 +15,7 @@ class GenerateFacets
      */
     public function createFacetsArray($response): array
     {
-
         foreach ($response as $resp) {
-
             foreach ($resp->niveaux as $niveau) {
                 if (! array_key_exists($niveau, $this->niveauxArray)) {
                     $this->niveauxArray[$niveau]['count'] = 1;
@@ -39,10 +37,11 @@ class GenerateFacets
         ksort($this->niveauxArray);
         ksort($this->typesArray);
         ksort($this->disciplinesArray);
+
         return [
             'Spécialités' => $this->disciplinesArray,
             'Types pédagogiques' => $this->typesArray,
-            'Niveaux' => $this->niveauxArray
+            'Niveaux' => $this->niveauxArray,
         ];
     }
 
@@ -54,13 +53,15 @@ class GenerateFacets
     private function cleanDisciplineFacet($disciplines): void
     {
         $expDisciplines = explode('#/', substr($disciplines, 1, -1));
-        if (! array_key_exists($expDisciplines[0], $this->disciplinesArray)) {
-            $this->disciplinesArray[$expDisciplines[0]]['count'] = 1;
-        } else {
-            $this->disciplinesArray[$expDisciplines[0]]['count']++;
+        if (! isset($expDisciplines[2]) && ! isset($expDisciplines[1])) {
+            if (! array_key_exists($expDisciplines[0], $this->disciplinesArray)) {
+                $this->disciplinesArray[$expDisciplines[0]]['count'] = 1;
+            } else {
+                $this->disciplinesArray[$expDisciplines[0]]['count']++;
+            }
         }
 
-        if (isset($expDisciplines[1])) {
+        if (isset($expDisciplines[1]) && ! isset($expDisciplines[2])) {
             if (! array_key_exists($expDisciplines[1], $this->disciplinesArray[$expDisciplines[0]])) {
                 $this->disciplinesArray[$expDisciplines[0]][$expDisciplines[1]]['count'] = 1;
             } else {
@@ -69,7 +70,7 @@ class GenerateFacets
         }
 
         if (isset($expDisciplines[2])) {
-            if (! $this->findKey($expDisciplines[2], $this->disciplinesArray)) {
+            if (! $this->findKey($expDisciplines[2], $this->disciplinesArray[$expDisciplines[0]][$expDisciplines[1]])) {
                 $this->disciplinesArray[$expDisciplines[0]][$expDisciplines[1]][$expDisciplines[2]]['count'] = 1;
             } else {
                 $this->disciplinesArray[$expDisciplines[0]][$expDisciplines[1]][$expDisciplines[2]]['count']++;
@@ -85,7 +86,7 @@ class GenerateFacets
      */
     private function findKey($keySearch, $array): bool
     {
-        if(is_array($array)) {
+        if (is_array($array)) {
             foreach ($array as $key => $item) {
                 if ($key == $keySearch) {
                     return true;
@@ -218,10 +219,14 @@ class GenerateFacets
      */
     static public function escapeSolrValue($string): array|string
     {
-        $match = array('\\', '+', '-', '&', '|', '!', '(', ')', '{', '}', '[', ']', '^', '~', '*', '?', ':', '"', ';', ' ');
-        $replace = array('\\\\', '\\+', '\\-', '\\&', '\\|', '\\!', '\\(', '\\)', '\\{', '\\}', '\\[', '\\]', '\\^', '\\~', '\\*', '\\?', '\\:', '\\"', '\\;', '\\ ');
+        $match = ['\\', '+', '-', '&', '|', '!', '(', ')', '{', '}', '[', ']', '^', '~', '*', '?', ':', '"', ';', ' '];
+        $replace = [
+            '\\\\', '\\+', '\\-', '\\&', '\\|', '\\!', '\\(', '\\)', '\\{', '\\}', '\\[', '\\]', '\\^', '\\~', '\\*',
+            '\\?', '\\:', '\\"', '\\;', '\\ ',
+        ];
         $string = str_replace($match, $replace, $string);
 
         return $string;
+
     }
 }

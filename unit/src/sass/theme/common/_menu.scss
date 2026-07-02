@@ -85,10 +85,14 @@
                 opacity: 1;
                 visibility: visible;
                 box-shadow: none;
-                margin-left: 40px;
+                margin-left: 10px;
                 width: auto;
                 padding: 10px;
                 transform: translateY(0) !important;
+
+                .dropdown-item{
+                    padding-left: .5rem;
+                }
             }
         }
 

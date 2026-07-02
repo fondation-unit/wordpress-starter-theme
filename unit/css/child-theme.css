@@ -22611,10 +22611,13 @@ footer .footer-last {
     opacity: 1;
     visibility: visible;
     box-shadow: none;
-    margin-left: 40px;
+    margin-left: 10px;
     width: auto;
     padding: 10px;
     transform: translateY(0) !important;
+  }
+  .dropdown .dropdown-menu.show .dropdown-item {
+    padding-left: 0.5rem;
   }
 }
 
