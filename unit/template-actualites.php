@@ -54,7 +54,7 @@ $container = get_theme_mod('understrap_container_type');
                                                     $argsActus->the_post();
                                                     ?>
                                                     <div
-                                                       class="actualite d-flex flex-md-row flex-column flex-wrap loop-card-<?php echo PRIMARY; ?>">
+                                                       class="actualite d-flex flex-md-row flex-column flex-md-wrap loop-card-<?php echo PRIMARY; ?> pb-md-0 pb-3">
                                                         <div class="image col-md-4">
 
                                                             <?php
@@ -66,7 +66,7 @@ $container = get_theme_mod('understrap_container_type');
                                                             ?>
 
                                                         </div>
-                                                        <div class="content p-md-4 p-3 col-md-8">
+                                                        <div class="content p-4 col-md-8">
                                                             <h2 class="no-point">
                                                                 <?php
                                                                 echo get_the_title();
