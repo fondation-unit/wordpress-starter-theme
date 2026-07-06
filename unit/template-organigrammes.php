@@ -45,7 +45,7 @@ $container = get_theme_mod('understrap_container_type');
                                                             $fonction = get_field('fonction', $value->ID);
                                                             $etablissement = get_field('etablissement', $value->ID);
                                                             ?>
-                                                            <div class="col-md-4 mb-3 text-center">
+                                                            <div class="col-md-4 w-100 mb-3 text-center">
                                                                <h3><?php echo $value->post_title; ?></h3>
                                                                 <p><?php echo $fonction; ?></p>
                                                                 <p><?php echo $etablissement; ?></p>

@@ -4,5 +4,11 @@
             margin-bottom: .5rem !important;
         }
 
+        h2{
+            @include media-breakpoint-down(md){
+                font-size: 1.5rem !important;
+            }
+        }
+
     }
 }

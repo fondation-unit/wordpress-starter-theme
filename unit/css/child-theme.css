@@ -25172,6 +25172,11 @@ swiper-container::part(bullet-active) {
 #organigrammes .organigrammes h3, #organigrammes .organigrammes .h3, #organigrammes .organigrammes p {
   margin-bottom: 0.5rem !important;
 }
+@media (max-width: 767.98px) {
+  #organigrammes .organigrammes h2, #organigrammes .organigrammes .h2 {
+    font-size: 1.5rem !important;
+  }
+}
 
 .has-blue-color,
 .has-blue-color:visited {
