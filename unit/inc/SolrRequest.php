@@ -174,15 +174,42 @@ class SolrRequest
      *
      * @return string
      */
-    private function setPorteur($fiche): string
+    private function setPorteur($fiche): ?string
     {
-        if (isset($fiche->etablissement_porteur)) {
-            $porteurData = json_decode($fiche->etablissement_porteur);
+        $porteurData = $fiche->etablissement_porteur;
 
-            return $porteurData->libelle;
+        if (empty($porteurData)) {
+            return null;
         }
 
-        return ! empty($fiche->etablissements_co_editeurs) ? implode(', ', $fiche->etablissements_co_editeurs) : '';
+        if (is_string($porteurData)) {
+            $decoded = json_decode($porteurData);
+            // Valid JSON.
+            if (json_last_error() === JSON_ERROR_NONE) {
+                $porteurData = $decoded;
+            } else {
+                return $porteurData;
+            }
+        }
+
+        if (is_array($porteurData)) {
+            // Array of strings.
+            if (array_is_list($porteurData)) {
+                return implode(', ', $porteurData);
+            }
+            // Associative array.
+            $libelle = $porteurData['libelle'] ?? null;
+        } elseif (is_object($porteurData)) {
+            $libelle = $porteurData->libelle ?? null;
+        } else {
+            return null;
+        }
+
+        if (is_array($libelle)) {
+            return implode(', ', $libelle);
+        }
+
+        return is_string($libelle) && $libelle !== '' ? $libelle : null;
     }
 
     /**
