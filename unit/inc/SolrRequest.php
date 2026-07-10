@@ -178,6 +178,7 @@ class SolrRequest
     {
         $porteurData = $fiche->etablissement_porteur;
 
+        dd($fiche->etablissement_porteur, true);
         if (empty($porteurData)) {
             return null;
         }
