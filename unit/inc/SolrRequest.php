@@ -172,7 +172,7 @@ class SolrRequest
     /**
      * @param $fiche
      *
-     * @return string
+     * @return string|null
      */
     private function setPorteur($fiche): ?string
     {
