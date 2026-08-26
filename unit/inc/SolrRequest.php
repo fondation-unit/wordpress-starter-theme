@@ -42,7 +42,11 @@ class SolrRequest
      */
     public function solrListeQuery($get, $page)
     {
-        $this->query->setQuery('*:*');
+        if (isset($get['recherche']) && ! empty($get['recherche'])) {
+            $this->query->setQuery($get['recherche']);
+        } else {
+            $this->query->setQuery('*:*');
+        }
         $this->query->setRows(ROWS_PER_PAGE);
         $this->generateStartSolrPage($page);
         $this->generateQuery($get);
@@ -89,6 +93,9 @@ class SolrRequest
             if (count($get[$field]) === 1) {
                 $newField = base64_decode($get[$field][0]);
                 $field = $field === 'specialites' ? 'discipline_facet' : $field;
+                if ($field === 'specialites') {
+                    $newField = $this->cleanSubSpecialitesField($newField);
+                }
                 $this->query->addFilterQuery($field . ":" . $likeCharacter . GenerateFacets::escapeSolrValue($newField)
                     . $likeCharacter);
             } else {
@@ -178,7 +185,6 @@ class SolrRequest
     {
         $porteurData = $fiche->etablissement_porteur;
 
-        dd($fiche->etablissement_porteur, true);
         if (empty($porteurData)) {
             return null;
         }
