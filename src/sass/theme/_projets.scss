@@ -1,0 +1,194 @@
+.home {
+    .projets {
+        h2 {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 1.5rem !important;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.projets-home {
+    .projet {
+        @include loop-card($primary);
+
+    }
+}
+
+#projets {
+    background: url('../img/pattern-gauche.png') left top no-repeat;
+
+    .projets {
+
+        .projet {
+            @include loop-card();
+            height: 535px !important;
+            width: 32%;
+            margin-right: 2%;
+            z-index: 3;
+
+            &:nth-of-type(3n+3) {
+                margin-right: 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .image {
+                height: 245px;
+
+                position: relative;
+                overflow: hidden;
+            }
+
+            h2 {
+                font-size: 1.125rem;
+                margin: 0 0 1.5rem !important;
+                text-decoration: none !important;
+                line-height: 100%;
+                min-height: 41px;
+            }
+
+            p {
+                font-size: .875rem;
+                @include media-breakpoint-down(md) {
+                    line-height: 1.25rem;
+                }
+            }
+
+            .content{
+                height: 265px;
+            }
+
+            .competence-projet{
+                margin-right: 2rem;
+
+                i{
+                    font-size: 1.5rem;
+                    color: #0D75BB;
+
+                    &.icon-unit-moodle {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+
+            .link {
+                margin-top: -10px;
+            }
+        }
+
+        @include loop-card-color();
+    }
+}
+
+#single-project {
+    .logo {
+        h1 {
+            @include point-title(0.6rem, 13px);
+        }
+
+        img {
+            max-height: 180px;
+
+            @include media-breakpoint-down(md) {
+                width: 75%;
+            }
+        }
+    }
+
+    .introduction {
+        img {
+            border-radius: 20px 0;
+
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .savoirs {
+        @include li-hashtag($primary);
+    }
+
+    .liste-chiffres, .liste-unts {
+        box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+        border-radius: 25px 0 25px 25px;
+        background-color: $white;
+        padding: 50px;
+
+    }
+
+    .liste-chiffres {
+        .chiffre {
+            font-size: 2.25rem;
+            font-weight: 700;
+        }
+    }
+
+    .liste-unts {
+        width: fit-content;
+
+        .unt {
+            max-width: 150px;
+        }
+    }
+
+    .conclusion {
+        .competence {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2rem;
+            margin-top: 2rem;
+            width: 100%;
+
+            a {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+            }
+
+            .icone {
+                width: 72px;
+                i {
+                    font-size: 2rem;
+                    color: $blue;
+                    margin-right: 1rem;
+
+                    &.icon-unit-moodle {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #actualites {
+        .actualites {
+            .actualite {
+                height: 400px;
+                width: 32%;
+                margin-right: 2%;
+
+                .image {
+                    height: 200px;
+                }
+
+                .content {
+                    height: 200px;
+
+                    h3 {
+                        font-size: 1.125rem;
+                        margin: 0 0 1.5rem !important;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.search-results {
+    article {
+        @include loop-card();
+        height: auto;
+        padding: 30px;
+
+        a {
+            text-decoration: none;
+        }
+
+    }
+
+    @include loop-card-color();
+}

@@ -1,0 +1,47 @@
+.pagination {
+    border: none;
+
+    .page-link {
+        color: $dark;
+
+        &:hover, &.current, &:focus {
+            background-color: $primary;
+            box-shadow: none;
+            color: $white;
+        }
+    }
+
+    .page-item {
+        box-shadow: 0 0 25px 0 rgba(206, 198, 192, 0.5);
+
+        &:first-child {
+            border-radius: 10px 0 0 0;
+
+            .page-link {
+                border-radius: 10px 0 0 0;
+            }
+        }
+
+        &:last-child {
+            border-radius: 0 0 10px 0;
+
+            .page-link {
+                border-radius: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .nav-actus {
+        &.#{$color} {
+            .pagination {
+                .page-link {
+                    &:hover, &.current, &:focus {
+                        background-color: $value !important;
+                    }
+                }
+            }
+        }
+    }
+}

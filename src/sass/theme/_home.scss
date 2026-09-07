@@ -1,0 +1,79 @@
+.home {
+    #index-wrapper {
+        padding-top: 0;
+        position: relative;
+        background: url('../img/pattern-gauche.png') left 35% no-repeat, url('../img/pattern-droite.png') right 115% no-repeat;
+        margin-top: 115px;
+
+        @include media-breakpoint-down(md){
+            margin-top: 85px;
+        }
+
+        .bg-primary{
+            min-height: calc(100vh - 115px);
+            display: flex;
+            align-items: center;
+
+            @include media-breakpoint-down(md) {
+                min-height: 0;
+                //height: 300px;
+            }
+
+            .container {
+                height: 100%;
+                background: url('../img/logo_unit_blanc.png') right center no-repeat;
+                
+                @include media-breakpoint-down(md){
+                    -webkit-background-size: 30%;
+                    background-size: 30%;
+                    background-position: bottom right;
+                }
+
+                h1 {
+                    text-transform: uppercase;
+                    color: $white;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                p{
+                    color: $white;
+                }
+
+                .wp-block-columns {
+                    &:not(.is-not-stacked-on-mobile) {
+                        & > .wp-block-column {
+                            @include media-breakpoint-down(xl) {
+                                flex-basis: auto;
+                            }
+                        }
+                    }
+                }
+
+                img{
+                    width: auto !important;
+                }
+
+                .wp-element-button{
+                    @extend .btn;
+                    background-color: #007DB1;
+                    padding: 16px 24px;
+                }
+            }
+
+            h2 {
+                color: $white;
+            }
+        }
+
+
+
+        h2 {
+            @include media-breakpoint-up(md) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
